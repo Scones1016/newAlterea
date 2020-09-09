@@ -1,0 +1,209 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courier+New&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+​
+
+​
+
+*{
+
+  box-sizing: border-box;
+
+  padding: 0px;
+
+  margin: 0px;
+
+}
+
+input:focus,
+
+select:focus,
+
+textarea:focus,
+
+button:focus {
+
+    outline: none;
+
+}
+
+​
+
+​
+
+.agencyContainer{
+  background-size: cover;
+  background-repeat: repeat;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
+.card{
+
+  position: relative;
+
+  width: 1000px;
+
+  padding: 30px 80px 20px 80px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+  background-image: url("images/umbra_background.png");
+
+}
+
+​
+
+.card .heading{
+
+  text-align: center;
+
+  font-family: Righteous, sans-serif;
+
+  font-weight: normal;
+
+  font-size: 5em;
+
+  color: #d83a00;
+
+  margin-bottom: 20px;
+
+}
+
+.card .text{
+
+  font-family: Courier New, monospace;
+
+  font-size: 1.6em;
+
+  line-height: 1.2em;
+
+  margin-bottom: 30px;
+
+}
+
+.card .highlight{
+
+  background-color: black;
+
+  color: white;
+
+}
+
+.card .proceedButton{
+
+  font-family: Courier New, monospace;
+
+  font-size: 1.3em;
+
+  display: block;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+  width: 400px;
+
+  height: 60px;
+
+  border: none;
+
+  border-radius: 0px;
+
+}
+
+.card .proceedButton:hover{
+
+  color: white;
+
+  background-color: black;
+
+}
+
+​
+
+​
+
+/* oracle */
+
+.oracleCard{
+
+
+  background-color: black;
+
+  background-repeat: no-repeat;
+
+  background-position: 50% 30%;
+
+  background-size: 350px auto;
+
+  height: 500px;
+
+}
+
+.oracleCard .heading{
+
+  font-family: 'Orbitron', sans-serif;
+
+  color: #7CCED6;
+
+}
+
+.oracleCard .text{
+
+  color: white;
+
+  font-size: 1.3em;
+
+}
+
+.oracleCard .highlight{
+
+  background-color: #6D0337;
+
+}
+
+​
+
+​
+
+.footer{
+
+  width: 200px;
+
+  margin-left: auto;
+
+  margin-right: auto;
+
+  position: absolute;
+
+  left: 43%;
+
+  bottom: 10px;
+
+  text-align: center;
+
+}
+
+.copyRight{
+
+  text-align: center;
+
+  color: white;
+
+}
+

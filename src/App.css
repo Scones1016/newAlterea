@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.containerClass {
+  background-image: linear-gradient(rgba(55, 55, 55, 0.9), rgba(55, 55, 55, 0.9)), url('./images/background.jpeg');
+  background-size: cover;
+  background-repeat: repeat;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}
+
+.content {
+  color: white;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.marginTop {
+  margin-top: 5%;
+}
+
+.title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 50pt;
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+.timer {
+  color: white;
+  margin-top: 2% !important;
+  font-size: 50pt;
+  font-family: 'Courier Prime', sans-serif;
+}
+
+.copyRight {
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.signUpButton {
+  color: black;
+  font-family: 'Montserrat Subrayada', sans-serif;
+  background-color: white;
+  text-transform: uppercase;
+  padding : 15px;
+  width: 15%;
+  font-size: 20pt;
+  margin-top: 3%;
+}
+
+.marginBetween {
+  height: 5%;
+  margin-top: 2%;
+  margin-left: 12%;
+  color: black;
+  font-family: 'Courier Prime', sans-serif;
+  width: 45%;
+}
+
+.styled-checkbox {
+  position: absolute;
+  opacity: 0;
+}
+.styled-checkbox + label {
+  position: relative;
+  cursor: pointer;
+  padding: 0;
+}
+.styled-checkbox + label:before {
+  content: '';
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: text-top;
+  width: 20px;
+  height: 20px;
+  background: white;
+}
+
+.styled-checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+.styled-checkbox:checked + label:before {
+  background: #000;
+}
+.styled-checkbox:disabled + label {
+  color: #b8b8b8;
+  cursor: auto;
+}
+.styled-checkbox:disabled + label:before {
+  box-shadow: none;
+  background: #ddd;
+}
+.styled-checkbox:checked + label:after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  background: black;
+  width: 2px;
+  height: 2px;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  transform: rotate(45deg);
+}
+
+.formButton {
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bgModal {
+  background-color: #999999;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.modalWidth {
+  min-width: 70%;
+  min-height: 50%;
+}
+
+.modalButton {
+  width: 20%;
+  background-color: white;
+  color: black;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.errorStyle {
+  text-transform: capitalize;
+  margin-left: 12%;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.duplicateEmailError {
+  text-transform: capitalize;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 20px;
+}
+
+.modalErrorStyle {
+  text-transform: capitalize;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.agreementErrorStyle {
+  text-transform: capitalize;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.noStyle {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.quizSelectedColor {
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-weight: bolder;
+}
+
+.quizSelectedColor:hover {
+  background-color: black;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.quizDefaultColor:hover {
+  background-color: black;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.quizDefaultColor {
+  color: white;
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bolder;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.newFont {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.confirmation {
+  text-transform: capitalize;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+}
+
+.marginTopConfirmation {
+  margin-top: 20%;
+}
+
+.modalText {
+  height : 600px;
+  overflow-y: scroll;
+}
+
+.loginLink {
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+
+.quizQuestion {
+  font-size: 20px;
+  color: white;
+}
+
+.quizChosenAnswer {
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.quizDescription {
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 30px;
+}
+
+.missionButton:hover{
+  color: white;
+  background-color: black;
+}
+
+.missionButton{
+  font-family: Courier New, monospace;
+  font-size: 1.3em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  height: 50px;
+  border: none;
+  border-radius: 0px;
+}
+
+.agencyContainer{
+  background-size: cover;
+  background-repeat: repeat;
+  min-width: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-color: #252525;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
