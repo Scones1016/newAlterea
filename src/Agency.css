@@ -114,7 +114,7 @@ button:focus {
     background-repeat: no-repeat;
     background-position: 50% 30%;
     background-size: 350px auto;
-    height: 500px;
+    height: auto;
   }
   
 .oracleCard .oracleHeading{
@@ -141,4 +141,14 @@ button:focus {
     padding: 30px 80px 20px 80px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.agencyFooter {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    bottom: 10%;
+    left: 43%;
+    text-align: center;
 }
