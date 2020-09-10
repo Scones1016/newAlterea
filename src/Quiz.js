@@ -69,11 +69,11 @@ class Quiz extends Component {
     endQuiz() {
         console.log(this.state.answerJsonFile);
         var userAnswers = {};
-        userAnswers["email"] = "feyashah21@gmail.com";
+        userAnswers["email"] = this.props.location.state.email;
         userAnswers["answer"] = this.state.answerJsonFile;
         console.log("USER ANSWERS");
         console.log(userAnswers);
-        var url = "http://localhost:5000/quiz";
+        var url = "http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/quiz";
         const axios = require('axios');
         axios.get(url, {
             params : userAnswers
@@ -84,22 +84,18 @@ class Quiz extends Component {
                 console.log(response);
                 console.log("DATA");
                 console.log(response.data);
-                
+                var agency = response.data.agency;
+                agency = agency.toUpperCase();
+                var agencyArray = agency.split("").join('.');
+                this.setState({
+                    agency: agencyArray,
+                    agentName: response.data.agentName
+                })
             })
             .catch(e=>console.log(e))
         this.setState({ finalQuestion: true});
-        /*const agencyName = 'Oracle';
-        agencyName.toUpperCase();
-        agencyName.join('.');
-        this.setState({
-            agency: agencyName,
-            agentName: 'Sneaky Fox 03'
-        })*/
+        setTimeout(() => this.setState({calibratingMessage:''}), 10000);
     }
-
-    componentDidMount(){
-        setTimeout(() => this.setState({calibratingMessage:''}), 500);
-      }
 
     disappearQuestion(answerIndex) {
         this.setState({ 
@@ -111,10 +107,11 @@ class Quiz extends Component {
 
     render() {
         let { nr, total, question, answers, messages, isAnswered, selectedAnswer, finalQuestion } = this.state;
+        console.log(this.state.agency);
         if(finalQuestion) {
             return (
                 <div className="agencyContainer">
-                    {this.state.calibratingMessage !== '' ? <CalibratingCard calibratingMessage={this.state.calibratingMessage}/> : <Agency agency={'U.M.B.R.A'} agentName={'Squeaky Fox 03'}/>}
+                    {this.state.calibratingMessage !== '' ? <CalibratingCard calibratingMessage={this.state.calibratingMessage}/> : <Agency agency={this.state.agency} agentName={this.state.agentName}/>}
                 </div>
             );
         }

@@ -93,8 +93,9 @@ class SignUpForm extends Component {
 
     handleSubmit() {
         if(this.validate()){
+            var signUpFlag = false;
             console.log(this.state.input);
-            var url = "http://localhost:5000/signup";
+            var url = "http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup";
             var data = this.state.input; 
             console.log(data);
             const axios = require('axios');
@@ -103,22 +104,24 @@ class SignUpForm extends Component {
             })
             .then(
                 response=> {
-                    console.log("HELLO");
-                    console.log(response);
+                    console.log(response.data.msg);
+                    if(response.data.msg === "error")
+                    {
+                        console.log("HELLO IN ERROR");
+                        signUpFlag = true;
+                        if(signUpFlag) {
+                            var errors = {};
+                            errors["confirmPassword"] = "Email Already In Use";
+                            this.setState({ errors: errors});
+                        }
+                    }
+                    else {
+                        var input = {};
+                        this.setState({ input: input});
+                        this.props.history.push('/signUpConfirmation');
+                    }
             })
             .catch(e=>console.log(e))
-            let input = {};
-            input["username"] = "";
-            input["email"] = "";    
-            input["password"] = "";
-            input["confirmPassword"] = "";
-            /*var errors = {};
-            errors["duplicateEmail"] = "Email Already In Use";
-            this.setState({
-                input: input,
-                errors: errors
-            });*/
-            this.props.history.push('/signUpConfirmation');
         }
     }
 

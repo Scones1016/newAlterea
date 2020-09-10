@@ -20,11 +20,11 @@ class Agency extends Component {
             Congratulations, Agent {this.props.agentName}!<br></br><br></br>
             
             Based on the results of your personality analysis we have assigned you to the <span className="highlight">U.M.B.R.A. Agency.</span><br></br>
-            You have high standards, a great eye for detail and enjoy the finer things in life. That's what it takes to be a member of an agency as elite as U.M.B.R.A.! We know you will excel here and will quickly become one of the brightest and the best.<br></br><br></br>
+            You have high standards, a great eye for detail and enjoy the finer things in life. That's what it takes to be a member of an agency as elite as U.M.B.R.A.! We know you will excel here and will quickly become one of the brightest and the best.
               <br/>
               <br/>
               Good luck Agent, and remember: <span className="highlight">Always trust nobody. Ever.</span>
-              <br/>
+            <br/>
             <br/>
         Let people know the results of your quiz!</p>
         <br/>
@@ -60,9 +60,7 @@ class Agency extends Component {
             You are the pinnacle of adaptable, a confident agent, and an electric personality. That's what it takes to be a member of an agency as forward thinking as O.R.A.C.L.E.! 
             We know you will excel here and will quickly become one of our leading visionaries.
             <br/>
-            <br/>
             Good luck Agent, and remember: <span className="highlight">Always trust nobody. Ever.</span>
-            <br/>
             <br/>
         Let people know the results of your quiz!</p>
         <br/>

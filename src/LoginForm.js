@@ -66,8 +66,9 @@ class LoginForm extends Component {
 
     handleSubmit() {
         if(this.validate()){
+            var loginFlag = false;
             console.log(this.state.input);
-            var url = "http://localhost:5000/login";
+            var url = "http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/login";
             var data = this.state.input; 
             const axios = require('axios');
             axios.get(url, {
@@ -77,15 +78,27 @@ class LoginForm extends Component {
                 response=> {
                     console.log("HELLO");
                     console.log(response);
+                    if(response.data.msg === "error")
+                    {
+                        console.log("HELLO IN ERROR");
+                        loginFlag = true;
+                        if(loginFlag) {
+                            var errors = {};
+                            errors["password"] = "Please enter valid email address / password";
+                            this.setState({ errors: errors});
+                        }
+                    }
+                    else {
+                        var email = this.state.input["email"];
+                        var input = {};
+                        this.setState({ input: input});
+                        this.props.history.push(
+                            '/quizIntro',
+                            { email: email}
+                          );
+                    }
             })
             .catch(e=>console.log(e))
-            this.props.history.push(
-                '/before_you_begin',
-                { email: this.state.input["email"] }
-            );
-            let input = {};
-            input["email"] = "";    
-            input["password"] = "";
         }
     }
 
