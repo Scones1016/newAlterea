@@ -95,10 +95,10 @@ class SignUpForm extends Component {
         var signUpFlag = false;
         if(this.validate()){
             console.log(this.state.input);
-            var url = "http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup";
+            var url = "https://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup";
             var data = this.state.input; 
             console.log(data);
-            const axios = require('axios');
+            /*const axios = require('axios');
             axios.get(url, {
                 params : data
             })
@@ -121,7 +121,19 @@ class SignUpForm extends Component {
                         this.props.history.push('/signUpConfirmation');
                     }
             })
-            .catch(e=>console.log(e))
+            .catch(e=>console.log(e))*/
+            url.search = new URLSearchParams({
+                username: this.state.input.username,
+                email: this.state.input.email,
+                password: this.state.input.password,
+            })
+            fetch(url)
+            .then(function(response) {
+                console.log(response);
+            })
+            .catch(function(error) {
+                console.log(response);
+            });
         }
     }
 
