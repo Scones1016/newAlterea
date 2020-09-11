@@ -35,11 +35,6 @@ app.get('/signup', function(req, res) {
   res.json({success: 'Hello signup successful', url: req.url});
 });
 
-app.get('/signup/*', function(req, res) {
-  // Add your code here
-  res.json({success: 'get call succeed!', url: req.url});
-});
-
 /****************************
 * Example post method *
 ****************************/
