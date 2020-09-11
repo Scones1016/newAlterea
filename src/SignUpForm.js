@@ -95,7 +95,7 @@ class SignUpForm extends Component {
         if(this.validate()){
             var signUpFlag = false;
             console.log(this.state.input);
-            var url = "http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup";
+            var url = "//backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup";
             var data = this.state.input; 
             console.log(data);
             const axios = require('axios');
