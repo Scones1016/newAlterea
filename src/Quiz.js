@@ -73,7 +73,7 @@ class Quiz extends Component {
         userAnswers["answer"] = this.state.answerJsonFile;
         console.log("USER ANSWERS");
         console.log(userAnswers);
-        var url = "http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/quiz";
+        var url = "https://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/quiz";
         const axios = require('axios');
         axios.get(url, {
             params : userAnswers

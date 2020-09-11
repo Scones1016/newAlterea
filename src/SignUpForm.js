@@ -122,17 +122,15 @@ class SignUpForm extends Component {
                     }
             })
             .catch(e=>console.log(e))*/
-            url.search = new URLSearchParams({
-                username: this.state.input.username,
-                email: this.state.input.email,
-                password: this.state.input.password,
+            var data = this.state.input;
+            fetch("http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup?username=${encodeURIComponent(data.username)}&email=${encodeURIComponent(data.email)}&password=${encodeURIComponent(data.password)}", {
+                method: "GET"
             })
-            fetch(url)
             .then(function(response) {
                 console.log(response);
             })
             .catch(function(error) {
-                console.log(response);
+                console.log(error);
             });
         }
     }
