@@ -95,7 +95,6 @@ class SignUpForm extends Component {
         var signUpFlag = false;
         if(this.validate()){
             console.log(this.state.input);
-            var url = "https://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup";
             var data = this.state.input; 
             console.log(data);
             /*const axios = require('axios');
@@ -123,7 +122,7 @@ class SignUpForm extends Component {
             })
             .catch(e=>console.log(e))*/
             var data = this.state.input;
-            fetch("http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup?username=${encodeURIComponent(data.username)}&email=${encodeURIComponent(data.email)}&password=${encodeURIComponent(data.password)}", {
+            fetch("https://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup?username=${encodeURIComponent(data.username)}&email=${encodeURIComponent(data.email)}&password=${encodeURIComponent(data.password)}", {
                 method: "GET"
             })
             .then(function(response) {
