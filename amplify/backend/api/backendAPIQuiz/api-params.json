@@ -1,0 +1,73 @@
+{
+    "paths": [
+        {
+            "name": "/signup",
+            "lambdaFunction": "signupLambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/signup"
+        },
+        {
+            "name": "/login",
+            "lambdaFunction": "loginLambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/login"
+        },
+        {
+            "name": "/quiz",
+            "lambdaFunction": "quizLambda",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/quiz"
+        }
+    ],
+    "resourceName": "backendAPIQuiz",
+    "apiName": "backendAPIQuiz",
+    "functionArns": [
+        {
+            "lambdaFunction": "signupLambda"
+        },
+        {
+            "lambdaFunction": "loginLambda"
+        },
+        {
+            "lambdaFunction": "quizLambda"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-altereaquizupload-agentquiz-132121-authRole",
+        "unAuthRoleName": "amplify-altereaquizupload-agentquiz-132121-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "signupLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "loginLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        },
+        {
+            "category": "function",
+            "resourceName": "quizLambda",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

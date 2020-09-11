@@ -10,6 +10,7 @@ import { IconButton } from '@material-ui/core';
 import SignUpConfirmation from './SignUpConfirmation';
 import LoginForm from './LoginForm';
 import { withRouter } from "react-router-dom";
+import { API } from 'aws-amplify';
 
 class SignUpForm extends Component {
     constructor() {
@@ -121,7 +122,7 @@ class SignUpForm extends Component {
                     }
             })
             .catch(e=>console.log(e))*/
-            var data = this.state.input;
+            /*var data = this.state.input;
             fetch("https://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup?username=${encodeURIComponent(data.username)}&email=${encodeURIComponent(data.email)}&password=${encodeURIComponent(data.password)}", {
                 method: "GET"
             })
@@ -130,7 +131,15 @@ class SignUpForm extends Component {
             })
             .catch(function(error) {
                 console.log(error);
-            });
+            });*/
+            API.get('backendAPIQuiz', '/signup')
+            .then((data) => {
+                console.log("Inside API call");
+                console.log(data);
+            })
+            .catch(e => {
+                console.log(e);
+            })
         }
     }
 
