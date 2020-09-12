@@ -16,10 +16,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import WelcomeRecruit from './WelcomeRecruit';
 import QuizDavid from './Quiz_David';
 import Agency from './Agency';
-import Amplify from 'aws-amplify';      
-import config from './aws-exports';     
-
-Amplify.configure(config)  
 
 ReactDOM.render(
   <React.StrictMode>

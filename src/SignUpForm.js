@@ -10,7 +10,6 @@ import { IconButton } from '@material-ui/core';
 import SignUpConfirmation from './SignUpConfirmation';
 import LoginForm from './LoginForm';
 import { withRouter } from "react-router-dom";
-import { API } from 'aws-amplify';
 
 class SignUpForm extends Component {
     constructor() {
@@ -93,54 +92,9 @@ class SignUpForm extends Component {
     }
 
     handleSubmit() {
-        var signUpFlag = false;
-        if(this.validate()){
-            console.log(this.state.input);
-            var data = this.state.input; 
-            console.log(data);
-            /*const axios = require('axios');
-            axios.get(url, {
-                params : data
-            })
-            .then(
-                response=> {
-                    console.log(response.data.msg);
-                    if(response.data.msg === "error")
-                    {
-                        console.log("HELLO IN ERROR");
-                        signUpFlag = true;
-                        if(signUpFlag) {
-                            var errors = {};
-                            errors["confirmPassword"] = "Email Already In Use";
-                            this.setState({ errors: errors});
-                        }
-                    }
-                    else {
-                        var input = {};
-                        this.setState({ input: input});
-                        this.props.history.push('/signUpConfirmation');
-                    }
-            })
-            .catch(e=>console.log(e))*/
-            /*var data = this.state.input;
-            fetch("https://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup?username=${encodeURIComponent(data.username)}&email=${encodeURIComponent(data.email)}&password=${encodeURIComponent(data.password)}", {
-                method: "GET"
-            })
-            .then(function(response) {
-                console.log(response);
-            })
-            .catch(function(error) {
-                console.log(error);
-            });*/
-            API.get('backendAPIQuiz', '/signup')
-            .then((data) => {
-                console.log("Inside API call");
-                console.log(data);
-            })
-            .catch(e => {
-                console.log(e);
-            })
-        }
+        fetch("https://reqres.in/api/users?page=2")
+        .then((response) => response.json())
+        .then((data) => console.log('This is your data', data));
     }
 
     validate() {
