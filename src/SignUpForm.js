@@ -92,7 +92,10 @@ class SignUpForm extends Component {
     }
 
     handleSubmit() {
-        fetch("https://reqres.in/api/users?page=2")
+        const username = "feya";
+        const email = "kisn@usc.edu";
+        const password = "kishan1234";
+        fetch("http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup?password="+password+"&username="+username+"&email="+email+"&confirmPassword="+password)
         .then((response) => response.json())
         .then((data) => console.log('This is your data', data));
     }
