@@ -10,6 +10,7 @@ import { IconButton } from '@material-ui/core';
 import SignUpConfirmation from './SignUpConfirmation';
 import LoginForm from './LoginForm';
 import { withRouter } from "react-router-dom";
+import MetaTags from 'react-meta-tags';
 
 class SignUpForm extends Component {
     constructor() {
@@ -92,12 +93,22 @@ class SignUpForm extends Component {
     }
 
     handleSubmit() {
-        const username = "feya";
-        const email = "kisn@usc.edu";
-        const password = "kishan1234";
-        fetch("//backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup?password="+password+"&username="+username+"&email="+email+"&confirmPassword="+password)
-        .then((response) => response.json())
-        .then((data) => console.log('This is your data', data));
+        if(this.validate()) {
+            var data = this.state.input;
+            fetch("http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup?password="+data.password+"&username="+data.username+"&email="+data.email+"&confirmPassword="+data.password, {
+            })
+            .then((response) => response.json())
+            .then((data) => {
+                if(data.msg === "error") {
+                    var errors = {};
+                    errors.confirmPassword = "Email Already In Use";
+                    this.setState({ errors: errors});
+                }
+                else {
+                    this.props.history.push("/signUpConfirmation");
+                }
+            });
+        }
     }
 
     validate() {
@@ -161,6 +172,10 @@ class SignUpForm extends Component {
         console.log("ERRORS");
         console.log(this.state.errors.confirmPassword);
         return (
+            <div className="wrapper">
+            <MetaTags>
+                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+            </MetaTags>
           <div className="containerClass">
                 <div className="content text-center container-fluid">
                     <a href="https://www.altereainc.com/about" className="noStyle newFont"><p className="marginTop">About Us</p></a>
@@ -229,6 +244,7 @@ class SignUpForm extends Component {
                     <p className="loginLink">Already Have An Account? <span onClick={this.redirectToLogin}> Login Here!</span></p>
                     <p className="marginTop copyRight">&#169;Alterea Inc, 2020</p>
                 </div>
+            </div>
             </div>
         );
     }
