@@ -30,17 +30,17 @@ class Agency extends Component {
         <br/>
           <div className="col-md-12 d-flex justify-content-center text-center">
             <div className="col-md-1">
-            <FacebookShareButton url={"https://master.d255jcfwldhlpr.amplifyapp.com/"} quote={"I am a part of the U.M.B.R.A agency. Check out which agency quiz you belong to!"} hashtag={"#AgentsOfInfluence"}>
+            <FacebookShareButton url={"www.agentsagainstdisinfo.com"} quote={"U.M.B.R.A. agents are ambitious, capable, and sinfully charming. Dr. Disinfo doesn’t stand a chance. Be with the best. Join U.M.B.R.A."} hashtag={"#AgentsAgainstDisinfo"}>
               <FacebookIcon size={32} round={true}/>
             </FacebookShareButton>
             </div>
             <div className="col-md-1">
-            <TwitterShareButton url={"https://master.d255jcfwldhlpr.amplifyapp.com/"} title={"I am a part of the U.M.B.R.A agency. Check out which agency quiz you belong to!"} hashtags={["AgentsOfInfluence,UmbraAgent"]}>
+            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"U.M.B.R.A. agents are ambitious, capable, and sinfully charming. Dr. Disinfo doesn’t stand a chance. Be with the best. Join U.M.B.R.A."} hashtags={["AgentsAgainstDisinfo", "TeamUmbra"]}>
               <TwitterIcon size={32} round={true}/>
             </TwitterShareButton>
             </div>
             <div className="col-md-1">
-            <WhatsappShareButton url={"https://master.d255jcfwldhlpr.amplifyapp.com/"} title={"I am a part of the U.M.B.R.A agency. Check out which agency quiz you belong to!"} separator={":"}>
+            <WhatsappShareButton url={"www.agentsagainstdisinfo.com"} title={"U.M.B.R.A. agents are ambitious, capable, and sinfully charming. Dr. Disinfo doesn’t stand a chance. Be with the best. Join U.M.B.R.A."} separator={":"}>
               <WhatsappIcon size={32} round={true}/>
             </WhatsappShareButton>
             </div>
@@ -66,17 +66,17 @@ class Agency extends Component {
         <br/>
           <div className="col-md-12 d-flex justify-content-center text-center">
             <div className="col-md-1">
-            <FacebookShareButton url={"https://master.d255jcfwldhlpr.amplifyapp.com/"} quote={"I am a part of the O.R.A.C.L.E agency. Check out which agency quiz you belong to!"} hashtag={"#AgentsOfInfluence"}>
+            <FacebookShareButton url={"www.agentsagainstdisinfo.com"} quote={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s ass."} hashtag={"#AgentsAgainstDisinfo"}>
               <FacebookIcon size={32} round={true}/>
             </FacebookShareButton>
             </div>
             <div className="col-md-1">
-            <TwitterShareButton url={"https://master.d255jcfwldhlpr.amplifyapp.com/"} title={"I am a part of the O.R.A.C.L.E agency. Check out which agency quiz you belong to!"} hashtags={["AgentsOfInfluence,OracleAgent"]}>
+            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s ass."} hashtags={["AgentsAgainstDisinfo,TeamOracle"]}>
               <TwitterIcon size={32} round={true}/>
             </TwitterShareButton>
             </div>
             <div className="col-md-1">
-            <WhatsappShareButton url={"https://master.d255jcfwldhlpr.amplifyapp.com/"} title={"I am a part of the O.R.A.C.L.E agency. Check out which agency quiz you belong to!"} separator={":"}>
+            <WhatsappShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back.Together, we can be awesome and kick Dr. Disinfo’s ass."} separator={":"}>
               <WhatsappIcon size={32} round={true}/>
             </WhatsappShareButton>
             </div>
