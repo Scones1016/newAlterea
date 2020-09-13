@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
+
 .App {
   text-align: center;
 }
+
 
 .App-logo {
   height: 40vmin;
@@ -31,6 +33,10 @@
   color: #61dafb;
 }
 
+.link{
+  cursor: pointer;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -41,7 +47,7 @@
 }
 
 .containerClass {
-  background-image: linear-gradient(rgba(55, 55, 55, 0.9), rgba(55, 55, 55, 0.9)), url('./images/background.jpeg');
+  background-image: linear-gradient(rgba(55, 55, 55, 0.5), rgba(55, 55, 55, 0.8)), url('./images/background.jpeg');
   background-size: cover;
   background-repeat: repeat;
   min-width: 100%;
@@ -53,8 +59,9 @@
 
 .content {
   color: white;
+  width: 100%;
+  height: 100vh;
   position: absolute;
-  text-transform: uppercase;
 }
 
 .marginTop {
@@ -66,6 +73,9 @@
   text-transform: uppercase;
   font-size: 50pt;
   font-family: 'Montserrat Subrayada', sans-serif;
+}
+.titleSignIn{
+  font-size: 50pt;
 }
 
 .timer {
@@ -80,24 +90,39 @@
   text-transform: capitalize;
 }
 
+.buttons{
+  margin-top: 80px;
+}
 .signUpButton {
   color: black;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   background-color: white;
   text-transform: uppercase;
   padding : 15px;
   width: 15%;
   font-size: 20pt;
-  margin-top: 3%;
+}
+
+
+.signUpHeader{
+  font-family:'Montserrat', sans-serif;
+  font-size: 1.8em;
+  margin-top: 20px;
+  float: left;
+  width: 500px;
+  margin-left: 20px;
+}
+.logInOption{
+  font-family:'Montserrat', sans-serif;
+  margin-left: 20px;
+  font-size: 1em;
 }
 
 .marginBetween {
-  height: 5%;
   margin-top: 2%;
-  margin-left: 12%;
+  margin-left: 20px;
   color: black;
   font-family: 'Courier Prime', sans-serif;
-  width: 45%;
 }
 
 .styled-checkbox {
@@ -151,6 +176,17 @@
   padding-bottom: 10px;
 }
 
+.input{
+  height: 30px;
+  width: 400px;
+  font-family: Courier New, sans-serif;
+}
+
+input[type="text"]
+{
+  font-family: Courier New, sans-serif;
+}
+
 .bgModal {
   background-color: #999999;
   font-family: 'Courier New', Courier, monospace;
@@ -170,29 +206,28 @@
 }
 
 .errorStyle {
-  text-transform: capitalize;
   margin-left: 12%;
   font-family: 'Courier New', Courier, monospace;
   color: white;
 }
 
 .duplicateEmailError {
-  text-transform: capitalize;
   font-family: 'Courier New', Courier, monospace;
   color: white;
   font-size: 20px;
 }
 
 .modalErrorStyle {
-  text-transform: capitalize;
   font-family: 'Courier New', Courier, monospace;
   color: white;
 }
 
 .agreementErrorStyle {
-  text-transform: capitalize;
   font-family: 'Courier New', Courier, monospace;
   color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
 
 .noStyle {
@@ -206,34 +241,30 @@ a:hover {
 }
 
 .quizSelectedColor {
-  background-color: black;
+  background-color: #1C1C1C;
   color: white;
   font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
-  padding-left: 50px;
-  padding-right: 50px;
-  font-weight: bolder;
+  /*font-weight: bolder;*/
 }
 
 .quizSelectedColor:hover {
-  background-color: black;
+  background-color: #1C1C1C;
   cursor: pointer;
-  font-weight: bolder;
+  /*font-weight: bolder;*/
 }
 
 .quizDefaultColor:hover {
-  background-color: black;
+  color: white;
+  background-color: #1C1C1C;
   cursor: pointer;
-  font-weight: bolder;
+  /*font-weight: bolder;*/
 }
 
 .quizDefaultColor {
-  color: white;
+  color: #1C1C1C;
   font-size: 20px;
   font-family: 'Courier New', Courier, monospace;
-  font-weight: bolder;
-  padding-left: 50px;
-  padding-right: 50px;
 }
 
 .newFont {
@@ -269,15 +300,14 @@ a:hover {
 
 .quizChosenAnswer {
   font-size: 20px;
-  color: white;
-  font-weight: bolder;
+  color: #1C1C1C;
   font-family: 'Courier New', Courier, monospace;
 }
 
 .quizDescription {
   font-size: 20px;
-  color: white;
-  font-weight: bolder;
+  color: #1C1C1C;
+  font-weight: bold;
   font-family: 'Courier New', Courier, monospace;
   padding: 30px;
 }
@@ -309,4 +339,14 @@ a:hover {
   display: flex;
   justify-content: center;
   align-items: center; 
+}
+
+.footer{
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  position: fixed;
+  left: 43%;
+  bottom: 10px;
+  text-align: center;
 }

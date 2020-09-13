@@ -53,7 +53,7 @@ class ModalDemo extends Component {
                     <label for="terms">{this.props.mStatement}</label>
                     <div className="modalErrorStyle">{this.state.error}</div>
                     <div className="row">
-                        <button className="mx-auto mb-3 mt-3 modalButton" onClick={this.validate}>move forward.</button>
+                        <button className="mx-auto mb-3 mt-3 modalButton" onClick={this.validate}>CONTINUE</button>
                     </div>
                 </div>  
             </Modal>
