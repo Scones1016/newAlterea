@@ -17,13 +17,13 @@ class Agency extends Component {
         <div className="umbraCard">
           <h1 className="umbraHeading">{this.props.agency}</h1>
           <p className="umbraText">
-            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>! You foiled Dr. Disinfo’s plans in the simulation. Keep in mind, however, that this was just a simulation — we have no idea what a man as dastardly as Dr. Disinfo could be cooking up in real life.<br></br><br></br>
+            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
             
-            Based on your decisions, we have assigned you to <span className="highlight">U.M.B.R.A.</span><br></br>
-           You may come off as arrogant to others, but you can’t help it: you’re charming, witty, stylish, and generally loveable. Self-confidence shouldn’t be a crime. Add in your knack for getting out of sticky situations unharmed, and you have everything it takes to be a member of an agency as elite as U.M.B.R.A. We know you will excel here. You clearly belong amongst the best. 
+            Based on the results of your personality analysis we have assigned you to the <span className="highlight">U.M.B.R.A. Agency.</span><br></br>
+            You have high standards, a great eye for detail and enjoy the finer things in life. That's what it takes to be a member of an agency as elite as U.M.B.R.A.! We know you will excel here and will quickly become one of the brightest and the best.
               <br/>
               <br/>
-              Good luck, Agent, and remember: <span className="highlight">Never trust anybody. Ever.</span>
+              Good luck Agent, and remember: <span className="highlight">Always trust nobody. Ever.</span>
             <br/>
             <br/>
         Let people know the results of your quiz!</p>
@@ -54,13 +54,14 @@ class Agency extends Component {
         <div className="oracleCard">
           <h1 className="oracleHeading">{this.props.agency}</h1>
           <p className="oracleText">
-            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>! You foiled Dr. Disinfo's plans in the simulation. You foiled Dr. Disinfo’s plans in the simulation. Keep in mind, however, that this was just a simulation — we have no idea what a man as dastardly as Dr. Disinfo could be cooking up in real life. <br></br><br></br>
+            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>! You foiled Dr. Disinfo's plans in the simulation.<br></br><br></br>
             
-            Based on your decisions, we have assigned you to <span className="highlight">O.R.A.C.L.E.</span><br></br>
-            While you may require seven alarms to wake up, you can always be counted on to get the job done when it matters most. You’re laid back and super fun to be around, yet you always surprise people with your deep thinking and creative problem solving. We know that you’ll fit right in at O.R.A.C.L.E.
+            Based on the results of your personality analysis we have assigned you to the <span className="highlight">O.R.A.C.L.E Agency.</span><br></br>
+            You are the pinnacle of adaptable, a confident agent, and an electric personality. That's what it takes to be a member of an agency as forward thinking as O.R.A.C.L.E.! 
+            We know you will excel here and will quickly become one of our leading visionaries.
             <br/>
-            Good luck, Agent, and remember: <span className="highlight">Never trust anybody. Ever.</span>
-            <br/> <br/>
+            Good luck Agent, and remember: <span className="highlight">Always trust nobody. Ever.</span>
+            <br/>
         Let people know the results of your quiz!</p>
         <br/>
           <div className="col-md-12 d-flex justify-content-center text-center">

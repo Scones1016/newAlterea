@@ -68,7 +68,7 @@ class LoginForm extends Component {
         if(this.validate()){
             var loginFlag = false;
             console.log(this.state.input);
-            var url = "https://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/login";
+            var url = "https://backend.defeatdis.info/login";
             var data = this.state.input; 
             const axios = require('axios');
             axios.get(url, {
