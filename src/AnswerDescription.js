@@ -18,7 +18,7 @@ class AnswerDescription extends Component {
             <div className="container">
                 <div className="card cardBeforeYouBegin">
                     <p className="quizDescription">{this.props.message}</p>
-                    <button className="proceedButton" onClick={this.returnToNextQuestion}>Continue</button>
+                    <button className="proceedButton" onClick={this.returnToNextQuestion}>CONTINUE</button>
                 </div>
             </div>
         );
