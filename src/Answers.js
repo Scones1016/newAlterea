@@ -3,6 +3,8 @@ import { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import AnswerDescription from './AnswerDescription';
+import ReactDOM from 'react-dom';
+
 
 class Answers extends Component {
     constructor(props) {
@@ -50,7 +52,7 @@ class Answers extends Component {
                 <div className={this.state.selectedAnswer === 3 ? 'quizSelectedColor': 'quizDefaultColor'} onClick={this.setAnswer.bind(this, 3)}>{answers[3]}</div>
                 <br/>
                 <br/>
-                <button className="proceedButton mt-3" onClick={this.changeToMessage}>Are you sure?</button>
+                <button className="proceedButton mt-3" onClick={this.changeToMessage}>CONFIRM</button>
             </div>
         );
     }

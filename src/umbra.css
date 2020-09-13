@@ -45,6 +45,7 @@ button:focus {
   min-height: 100vh;
   position: relative;
   background-color: #252525;
+  background-image: url('./images/background.jpeg');
   display: flex;
   justify-content: center;
   align-items: center; 
@@ -62,7 +63,17 @@ button:focus {
 
   margin-right: auto;
 
+  border-radius: 10px;
+
+  background-color: #EEDDCD;
+
   background-image: url("images/umbra_background.png");
+
+  background-repeat: no-repeat;
+  
+  background-position: 50% 50%;
+  
+  background-size: 500px auto;
 
 }
 
@@ -204,6 +215,8 @@ button:focus {
   text-align: center;
 
   color: white;
+
+  font-family: Courier New, monospace;
 
 }
 
