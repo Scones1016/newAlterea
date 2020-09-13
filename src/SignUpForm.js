@@ -95,7 +95,7 @@ class SignUpForm extends Component {
     handleSubmit() {
         if(this.validate()) {
             var data = this.state.input;
-            fetch("https://backend.defeatdis.info/signup?password="+data.password+"&username="+data.username+"&email="+data.email+"&confirmPassword="+data.password, {
+            fetch("http://backend-env.eba-zkuyd2ed.us-east-1.elasticbeanstalk.com/signup?password="+data.password+"&username="+data.username+"&email="+data.email+"&confirmPassword="+data.password, {
             })
             .then((response) => response.json())
             .then((data) => {

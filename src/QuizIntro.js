@@ -22,7 +22,7 @@ class QuizIntro extends Component {
       <div className="container">
         <div className="card cardBeforeYouBegin">
 
-          <p className="quizQuestion">Welcome to the <span className="highlight">Virtual Training Simulation</span>. Recent intel suggests Dr. Disinfo has been planning something to do with pineapples and pizzas in his secret hideout hidden within his fancy hotel in downtown Los Angeles. Your mission is to <span className="highlight">infiltrate Dr. Disinfo’s penthouse hotel suite </span> and foil his plans. Intel shows he owns the hotel and uses it as a cover for his operations, so trust nobody.</p>
+          <p className="quizQuestion">Welcome to the <span className="highlight">Virtual Training Simulation</span>. Recent intel suggests Dr. Disinfo is almost ready to carry out his Hawaiian pizza strike. Your mission: <span className="highlight">find him and stop him before it’s too late.</span> We’ve tracked him to the Deluxe Hotel in Downtown Los Angeles. Everyone knows DH really stands for “Disinfo Headquarters”. The place is crawling with his cronies. </p>
 
             <button onClick={this.redirectToQuiz} class="proceedButton">proceed now.</button>
 
