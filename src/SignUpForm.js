@@ -152,7 +152,7 @@ class SignUpForm extends Component {
 
         if(this.state.modalTermsCheckBox !== true || this.state.modalUserCheckBox !== true || this.state.modalPrivacyCheckBox !== true) {
             isValid = false;
-            errors["checkbox"] = "Please look through each of the above three agreements.";
+            errors["checkbox"] = "You must agree to our Terms and Conditions before being able to login to the dashboard.";
         }
 
 
@@ -185,14 +185,17 @@ class SignUpForm extends Component {
                             <p className="title">Agent</p>
                         </div>
                         <div className="col-md-6 text-left">
+
                                 <form className="col-md-12 d-flex flex-column">
-                                    <input className="marginBetween text-center" type="text" id="username" name="username" placeholder="enter your name" value={this.state.input.username} onChange={this.handleChange}/>
+                                    <h1 className="signUpHeader">CREATE AN ACCOUNT</h1>
+                                    <h3 className="logInOption">ALREADY HAVE AN ACCOUNT? <u><span className="link" onClick={this.redirectToLogin}>LOG IN.</span></u></h3>
+                                    <input className="marginBetween text-center input" type="text" id="username" name="username" placeholder="FULL NAME" value={this.state.input.username} onChange={this.handleChange}/>
                                     <p className="errorStyle">{this.state.errors.username}</p>
-                                    <input className="marginBetween text-center" type="email" id="email" name="email" placeholder="enter your email-ID" value={this.state.input.email} onChange={this.handleChange}/>
+                                    <input className="marginBetween text-center input" type="email" id="email" name="email" placeholder="EMAIL" value={this.state.input.email} onChange={this.handleChange}/>
                                     <p className="errorStyle">{this.state.errors.email}</p>
-                                    <input className="marginBetween text-center" type="password" placeholder="create your password" name="password" value={this.state.input.password} onChange={this.handleChange}/>
+                                    <input className="marginBetween text-center input" type="password" placeholder="PASSWORD" name="password" value={this.state.input.password} onChange={this.handleChange}/>
                                     <p className="errorStyle">{this.state.errors.password}</p>
-                                    <input className="marginBetween text-center" type="password" placeholder="confirm password" name="confirmPassword" value={this.state.input.confirmPassword} onChange={this.handleChange} />
+                                    <input className="marginBetween text-center input" type="password" placeholder="CONFIRM PASSWORD" name="confirmPassword" value={this.state.input.confirmPassword} onChange={this.handleChange} />
                                     <div className="errorStyle">{this.state.errors.confirmPassword}</div>
                                 </form>
                         </div>
@@ -205,31 +208,31 @@ class SignUpForm extends Component {
                             <div className="col-md-3"></div>
                             <div className="col-md-6 row">
                                 <div className="col-md-1"></div>
-                                <div className="col-md-2">
+                                <div className="col-md-3">
                                     <div>
-                                        <p className="newFont" onClick={this.openTerms}>Terms & Conditions</p>
+                                        <p className="newFont link" onClick={this.openTerms}><u>Terms & Conditions</u></p>
                                         <input className="styled-checkbox" id="styled-checkbox-1" type="checkbox" checked={this.state.modalTermsCheckBox}></input>
                                         <label for="styled-checkbox-1"></label>
                                         <ModalDemo modalOption={0} checkBoxState={this.state.modalTermsCheckBox} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms} mError={this.state.modalErrors[0]} changeState={this.changeTermsState} mStatement={this.state.modalStatements[0]}/>
                                     </div>
                                 </div>
-                                <div className="col-md-2">
+                                <div className="col-md-1">
                                     <ArrowRightAltIcon/>
                                 </div>
-                                <div className="col-md-2">
+                                <div className="col-md-3">
                                     <div>
-                                        <p className="newFont" onClick={this.openUser}>Game Rules</p>
+                                        <p className="newFont link" onClick={this.openUser}><u>Game Rules</u></p>
                                         <input className="styled-checkbox" id="styled-checkbox-2" type="checkbox" checked={this.state.modalUserCheckBox}></input>
                                         <label for="styled-checkbox-2"></label>
                                         <ModalDemo modalOption={1} checkBoxState={this.state.modalUserCheckBox} isOpen={this.state.isUserModalOpen} mTitle={this.state.modalTitles[1]} mText={this.state.modalTexts[1]} hideDialog={this.hideUser} mError={this.state.modalErrors[1]} changeState={this.changeUsersState} mStatement={this.state.modalStatements[1]}/>
                                     </div>
                                 </div>
-                                <div className="col-md-2">
+                                <div className="col-md-1">
                                     <ArrowRightAltIcon/>
                                 </div>
-                                <div className="col-md-2">
+                                <div className="col-md-3">
                                     <div>
-                                        <p className="newFont" onClick={this.openPrivacy}>Privacy Policy</p>
+                                        <p className="newFont link" onClick={this.openPrivacy}><u>Privacy Policy</u></p>
                                         <input className="styled-checkbox" id="styled-checkbox-3" type="checkbox" checked={this.state.modalPrivacyCheckBox}></input>
                                         <label for="styled-checkbox-3"></label>
                                         <ModalDemo modalOption={2} checkBoxState={this.state.modalPrivacyCheckBox} isOpen={this.state.isPrivacyModalOpen} mTitle={this.state.modalTitles[2]} mText={this.state.modalTexts[2]} hideDialog={this.hidePrivacy} mError={this.state.modalErrors[2]} changeState={this.changePrivacyState} mStatement={this.state.modalStatements[2]}/>
@@ -239,10 +242,12 @@ class SignUpForm extends Component {
                             <div className="col-md-3"></div>
                         </div>
                     </div>
-                    <button className="signUpButton formButton" onClick={this.handleSubmit}>Sign Up</button>
-                    <div className="agreementErrorStyle col-md-12 text-center mt-2">{this.state.errors.checkbox}</div>
-                    <p className="loginLink">Already Have An Account? <span onClick={this.redirectToLogin}> Login Here!</span></p>
-                    <p className="marginTop copyRight">&#169;Alterea Inc, 2020</p>
+                    <div className="buttons container-fluid">
+                        
+                        <button className="signUpButton formButton col-md-2 " onClick={this.handleSubmit}>Sign Up</button>
+                        <p className="agreementErrorStyle col-md-4 text-center">{this.state.errors.checkbox}</p>
+                        <p className="marginTop copyRight">&#169;Alterea Inc, 2020</p>
+                    </div>
                 </div>
             </div>
             </div>

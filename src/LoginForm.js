@@ -151,42 +151,43 @@ class LoginForm extends Component {
                 <a href="https://www.altereainc.com/about" className="noStyle newFont"><p className="marginTop">About Us</p></a>
                 <div className="row marginTop">
                     <div className="col-md-6 text-right">
-                        <p className="title">Welcome Back,</p>
-                        <p className="title">Agent</p>
+                        <p className="title titleSignIn">Welcome Back,</p>
+                        <p className="title titleSignIn">Agent</p>
                     </div>
                     <div className="col-md-6 text-left">
                             <form className="col-md-12 d-flex flex-column">
-                                <input className="marginBetween text-center" type="email" id="email" name="email" placeholder="enter your email-ID" value={this.state.input.email} onChange={this.handleChange}/>
+                                <h1 className="signUpHeader">SIGN IN</h1>
+                                    <h3 className="logInOption">DON'T HAVE AN ACCOUNT? SIGN UP <u><span className="link" onClick={this.redirectToSignUp}>HERE</span></u>.</h3>
+                                <input className="marginBetween text-center input" type="email" id="email" name="email" placeholder="EMAIL" value={this.state.input.email} onChange={this.handleChange}/>
                                 <p className="errorStyle">{this.state.errors.email}</p>
-                                <input className="marginBetween text-center" type="password" placeholder="enter your password" name="password" value={this.state.input.password} onChange={this.handleChange}/>
+                                <input className="marginBetween text-center input" type="password" placeholder="PASSWORD" name="password" value={this.state.input.password} onChange={this.handleChange}/>
                                 <p className="errorStyle">{this.state.errors.password}</p>
                             </form>
                     </div>
                 </div>
-                <button className="signUpButton formButton" onClick={this.handleSubmit}>Log In</button>
-                <p className="loginLink">Don't have an account yet? <span onClick={this.redirectToSignUp}> Create One!</span></p>
+
                 <div className="text-center container-fluid">
-                    <div className="row mt-5">
+                    <div className="row mt-5 mb-5">
                         <div className="col-md-3"></div>
                         <div className="col-md-6 row">
                             <div className="col-md-1"></div>
-                            <div className="col-md-2">
+                            <div className="col-md-3">
                                 <div>
-                                    <p className="newFont" onClick={this.openTerms}>Terms & Conditions</p>
+                                    <p className="newFont" onClick={this.openTerms}><u>Terms & Conditions</u></p>
                                     <LoginModal modalOption={0} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms}/>
                                 </div>
                             </div>
-                            <div className="col-md-2">
+                            <div className="col-md-1">
                             </div>
                             <div className="col-md-2">
-                                    <p className="newFont" onClick={this.openUser}>Game Rules</p>
+                                    <p className="newFont" onClick={this.openUser}><u>Game Rules</u></p>
                                     <LoginModal modalOption={1} isOpen={this.state.isUserModalOpen} mTitle={this.state.modalTitles[1]} mText={this.state.modalTexts[1]} hideDialog={this.hideUser}/>
                             </div>
-                            <div className="col-md-2">
+                            <div className="col-md-1">
                             </div>
-                            <div className="col-md-2">
+                            <div className="col-md-3">
                                 <div>
-                                    <p className="newFont" onClick={this.openPrivacy}>Privacy Policy</p>
+                                    <p className="newFont" onClick={this.openPrivacy}><u>Privacy Policy</u></p>
                                     <LoginModal modalOption={2} isOpen={this.state.isPrivacyModalOpen} mTitle={this.state.modalTitles[2]} mText={this.state.modalTexts[2]} hideDialog={this.hidePrivacy}/>
                                 </div>
                             </div>
@@ -194,6 +195,9 @@ class LoginForm extends Component {
                         <div className="col-md-3"></div>
                     </div>
                 </div>
+
+                <button className="signUpButton formButton" onClick={this.handleSubmit}>SIGN In</button>
+
                 <p className="marginTop copyRight">&#169;Alterea Inc, 2020</p>
             </div>
           </div>

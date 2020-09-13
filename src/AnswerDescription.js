@@ -17,7 +17,6 @@ class AnswerDescription extends Component {
         return (
             <div className="container">
                 <div className="card cardBeforeYouBegin">
-                    <p className="quizChosenAnswer">{this.props.answer}</p>
                     <p className="quizDescription">{this.props.message}</p>
                     <button className="proceedButton" onClick={this.returnToNextQuestion}>Continue</button>
                 </div>
