@@ -114,7 +114,7 @@ button:focus {
   }
 
 .oracleCard{
-    background-image: url("images/oracle_logo.png");
+    background-image: url('./images/oracle_logo.png');
     background-color: black;
     background-repeat: no-repeat;
     background-position: 50% 30%;

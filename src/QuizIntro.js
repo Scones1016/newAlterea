@@ -24,7 +24,7 @@ class QuizIntro extends Component {
 
           <p className="quizQuestion">Welcome to the <span className="highlight">Virtual Training Simulation</span>. Recent intel suggests Dr. Disinfo has been planning something to do with pineapples and pizzas in his secret hideout hidden within his fancy hotel in downtown Los Angeles. Your mission is to <span className="highlight">infiltrate Dr. Disinfo’s penthouse hotel suite </span> and foil his plans. Intel shows he owns the hotel and uses it as a cover for his operations, so trust nobody.</p>
 
-            <button onClick={this.redirectToQuiz} class="proceedButton">proceed now.</button>
+            <button onClick={this.redirectToQuiz} class="proceedButton">PROCEED NOW</button>
 
         </div>
         <div className="footer">
