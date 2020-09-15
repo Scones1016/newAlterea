@@ -20,27 +20,23 @@ class Answers extends Component {
     }
 
     setAnswer(selectedAnswer) {
-        console.log("SET ASNWER");
         this.setState({ 
             selectedAnswer: selectedAnswer
         });
-        console.log(this.state.selectedAnswer);
     }
 
     changeToMessage() {
-        console.log("CHANGE TO MESSAGE");
-        console.log(this.state.selectedAnswer);
         const answerIndex = this.state.selectedAnswer;
         if(this.state.selectedAnswer != 5) {
-            console.log("AB CHANGE KRO");
-            console.log(this.state.isAnswered);
             this.props.disappearQuestion(answerIndex);
         }
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('popstate', this.onBackButtonEvent);
+    }
+
     render() {
-        console.log("RENDERING");
-        console.log(this.state.selectedAnswer);
         let { answers, messages } = this.props;
         let { isAnswered } = this.state;
         let {selectedAnswer } = this.state;

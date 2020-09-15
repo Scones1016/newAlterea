@@ -14,7 +14,7 @@ import MetaTags from 'react-meta-tags';
 
 class SignUpForm extends Component {
     constructor() {
-        super();
+        super(...arguments);
         this.state = { 
             isTermsModalOpen: false ,
             isUserModalOpen: false,
@@ -105,7 +105,7 @@ class SignUpForm extends Component {
                     this.setState({ errors: errors});
                 }
                 else {
-                    this.props.history.push("/signUpConfirmation");
+                    this.props.history.push("/quizIntro");
                 }
             });
         }
@@ -169,13 +169,8 @@ class SignUpForm extends Component {
     }
 
     render() {
-        console.log("ERRORS");
-        console.log(this.state.errors.confirmPassword);
         return (
-            <div className="wrapper">
-            <MetaTags>
-                <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
-            </MetaTags>
+            <div className="wrapper" onClick={this.closeAllModals}>
           <div className="containerClass">
                 <div className="content text-center container-fluid">
                     <a href="https://www.altereainc.com/about" className="noStyle newFont"><p className="marginTop">About Us</p></a>
@@ -213,7 +208,7 @@ class SignUpForm extends Component {
                                         <p className="newFont link" onClick={this.openTerms}><u>Terms & Conditions</u></p>
                                         <input className="styled-checkbox" id="styled-checkbox-1" type="checkbox" checked={this.state.modalTermsCheckBox}></input>
                                         <label for="styled-checkbox-1"></label>
-                                        <ModalDemo modalOption={0} checkBoxState={this.state.modalTermsCheckBox} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms} mError={this.state.modalErrors[0]} changeState={this.changeTermsState} mStatement={this.state.modalStatements[0]}/>
+                                        <ModalDemo modalOption={0} checkBoxState={this.state.modalTermsCheckBox} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms} mError={this.state.modalErrors[0]} changeState={this.changeTermsState} mStatement={this.state.modalStatements[0]} ref={dialog => this.dialogInstance = dialog}/>
                                     </div>
                                 </div>
                                 <div className="col-md-1">

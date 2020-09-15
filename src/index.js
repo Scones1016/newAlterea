@@ -29,8 +29,6 @@ ReactDOM.render(
           <Route exact path="/welcome" component={WelcomeRecruit}/>
           <Route exact path="/before_you_begin" component={BeforeYouBegin}/>
           <Route exact path="/quizIntro" component={QuizIntro}/>
-          <Route exact path="/oracle" render={(props) => (
-    <Agency {...props} agency={'O.R.A.C.L.E'} agentName={'Squeaky Fox 54'}/>)}/>
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

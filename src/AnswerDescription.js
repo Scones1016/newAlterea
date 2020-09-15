@@ -13,6 +13,10 @@ class AnswerDescription extends Component {
         this.props.changeToNextQuestion();
     }
 
+    componentWillUnmount() {
+        window.removeEventListener('popstate', this.onBackButtonEvent);
+    }
+
     render() {
         return (
             <div className="container">

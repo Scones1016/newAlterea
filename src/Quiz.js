@@ -9,6 +9,7 @@ import Answers from './Answers';
 import AnswerDescription from './AnswerDescription';
 import CalibratingCard from './CalibratingCard';
 import Agency from './Agency';
+import { Prompt } from "react-router-dom";
 
 class Quiz extends Component {
     constructor(props) {
@@ -22,12 +23,43 @@ class Quiz extends Component {
             finalQuestion: false,
             agency: '',
             agentName: '',
-            calibratingMessage: 'CALIBRATING...'
+            calibratingMessage: 'CALIBRATING...',
+            isBackButtonClicked: false,
+            email: this.props.location.state.email
         }
         this.nextQuestion = this.nextQuestion.bind(this);
         this.createAnswerJsonFile = this.createAnswerJsonFile.bind(this);
         this.disappearQuestion = this.disappearQuestion.bind(this);
         this.endQuiz = this.endQuiz.bind(this);
+    }
+
+    onBackButtonEvent = (e) => {
+        e.preventDefault();
+            if (window.confirm("Are you sure you want to leave? We'll lose your answers!")) {
+                this.isBackButtonClicked = true;
+            } 
+            else {
+                window.history.pushState(null, null, window.location.pathname);
+                this.props.history.push(
+                    '/quizIntro',
+                    { email: this.state.email}
+                  );
+                this.isBackButtonClicked = false;
+            }
+    }
+
+    componentDidMount() {     
+        window.history.pushState(null, null, window.location.pathname);
+        window.addEventListener('popstate',this.onBackButtonEvent);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('popstate', this.onBackButtonEvent);
+    }
+
+    componentDidUpdate() {
+        window.history.pushState(null, null, window.location.pathname);
+        window.addEventListener('popstate',this.onBackButtonEvent);
     }
 
     pushData(nr) {
@@ -41,10 +73,6 @@ class Quiz extends Component {
 
     createAnswerJsonFile(answerIndex) {
         this.setState({ selectedAnswer: answerIndex});
-        //this.setState({ answerJsonFile: this.state.answerJsonFile.concat(answerIndex) })
-        //if(this.state.nr === this.state.total) {
-            //console.log(this.state.answerJsonFile);
-        //}
     }
 
     componentWillMount() {
@@ -67,12 +95,9 @@ class Quiz extends Component {
     }
 
     endQuiz() {
-        console.log(this.state.answerJsonFile);
         var userAnswers = {};
         userAnswers["email"] = this.props.location.state.email;
         userAnswers["answer"] = this.state.answerJsonFile;
-        console.log("USER ANSWERS");
-        console.log(userAnswers);
         var url = "https://backend.defeatdis.info/quiz";
         const axios = require('axios');
         axios.get(url, {
@@ -80,10 +105,6 @@ class Quiz extends Component {
         })
         .then(
             response=> {
-                console.log("HELLO");
-                console.log(response);
-                console.log("DATA");
-                console.log(response.data);
                 var agency = response.data.agency;
                 agency = agency.toUpperCase();
                 var agencyArray = agency.split("").join('.');
@@ -94,7 +115,7 @@ class Quiz extends Component {
             })
             .catch(e=>console.log(e))
         this.setState({ finalQuestion: true});
-        setTimeout(() => this.setState({calibratingMessage:''}), 10000);
+        setTimeout(() => this.setState({calibratingMessage:''}), 7000);
     }
 
     disappearQuestion(answerIndex) {
@@ -106,8 +127,7 @@ class Quiz extends Component {
     }
 
     render() {
-        let { nr, total, question, answers, messages, isAnswered, selectedAnswer, finalQuestion } = this.state;
-        console.log(this.state.agency);
+        let { nr, total, question, answers, messages, isAnswered, selectedAnswer, finalQuestion, backdoor } = this.state;
         if(finalQuestion) {
             return (
                 <div className="agencyContainer">
@@ -120,6 +140,7 @@ class Quiz extends Component {
                 return (
                     <div className="container">
                         <div className="card cardBeforeYouBegin">
+                <p className="quizQuestionNo">{nr}/{total}</p>
                         <p className="quizQuestion">{question}</p>
                         <Answers answers={answers} messages={messages} isAnswered={this.questionAnswered} selectedAnswer={this.state.selectedAnswer} storeAnswer={this.createAnswerJsonFile} disappearQuestion={this.disappearQuestion}/>
                         </div>

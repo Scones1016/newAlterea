@@ -9,7 +9,6 @@ class SignUpConfirmation extends Component {
     }
 
     render() {
-        console.log("SIGN UP CONFIRMATION");
         return (
             <div className="containerClass">
                 <div className="content text-center container-fluid marginTopConfirmation">

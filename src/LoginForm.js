@@ -76,8 +76,6 @@ class LoginForm extends Component {
             })
             .then(
                 response=> {
-                    console.log("HELLO");
-                    console.log(response);
                     if(response.data.msg === "error")
                     {
                         console.log("HELLO IN ERROR");

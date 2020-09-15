@@ -5,6 +5,7 @@ import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.css';
 import './App.css';
+import CloseIcon from '@material-ui/icons/Close';
 
 class ModalDemo extends Component {
     constructor(props){
@@ -38,14 +39,11 @@ class ModalDemo extends Component {
     }
 
     render() {
-        console.log("CHECKED");
-        console.log(this.state.checked);
-        console.log("PROPS CHECKBOXSTATE");
-        console.log(this.props.checkBoxState);
         return (
             <Modal show={this.props.isOpen} dialogClassName="modalWidth">
                 <div className="bgModal pl-5 pr-5 pt-3">
-                    <p className="title">{this.props.mTitle}</p>
+                    <p className="title">{this.props.mTitle}
+                    <CloseIcon className="closeIcon" onClick={this.props.hideDialog}/></p>
                     <div className="modalText" dangerouslySetInnerHTML={ this.props.modalOption === 0 ? createTerms() : this.props.modalOption === 1 ? createUser() : createPrivacy() } />
                     <br/>
                     <br/>
