@@ -64,6 +64,12 @@
   position: absolute;
 }
 
+.intro{
+  font-family: Courier Prime, sans-serif;
+  font-size: 1em;
+}
+
+
 .marginTop {
   margin-top: 5%;
 }
