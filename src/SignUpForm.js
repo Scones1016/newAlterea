@@ -213,12 +213,7 @@ Starting on October 4th, you will complete a short digital mission every day, ea
                                     <div>
                                         <button className="newFont link" onClick={this.openTerms}>Terms & Conditions</button>
                                         <input className="styled-checkbox" id="styled-checkbox-1" type="checkbox" checked={this.state.modalTermsCheckBox}></input>
-<<<<<<< HEAD
-                                        <label for="styled-checkbox-1"></label>
-                                        <ModalDemo modalOption={0} checkBoxState={this.state.modalTermsCheckBox} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms} mError={this.state.modalErrors[0]} changeState={this.changeTermsState} mStatement={this.state.modalStatements[0]} ref={dialog => this.dialogInstance = dialog}/>
-=======
                                         <ModalDemo modalOption={0} checkBoxState={this.state.modalTermsCheckBox} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms} mError={this.state.modalErrors[0]} changeState={this.changeTermsState} mStatement={this.state.modalStatements[0]}/>
->>>>>>> 4bcb8ed95e7abd6ce621e3b621a1bcc3270e4f8a
                                     </div>
                                 </div>
                                 <div className="col-md-1">
