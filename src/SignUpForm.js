@@ -178,11 +178,10 @@ class SignUpForm extends Component {
             </MetaTags>
           <div className="containerClass">
                 <div className="content text-center container-fluid">
-                    <a href="https://www.altereainc.com/about" className="noStyle newFont"><p className="marginTop">About Us</p></a>
-                    <div className="row marginTop">
-                        <div className="col-md-6 text-right">
+                    <div className="row marginTop topRow">
+                        <div className="col-md-6 text-right titles">
                             <p className="title">Welcome,</p>
-                            <p className="title">Agent</p>
+                            <p className="title">Recruit</p>
                         </div>
                         <div className="col-md-6 text-left">
 
@@ -203,12 +202,14 @@ class SignUpForm extends Component {
                     <br/>
                     <br/>
                     <div className="col-md-12 text-center duplicateEmailError">{this.state.errors.duplicateEmail}</div>
+
+
                     <div className="text-center container-fluid">
-                        <div className="row mt-5">
+                        <div className="row ">
                             <div className="col-md-3"></div>
                             <div className="col-md-6 row">
-                                <div className="col-md-1"></div>
-                                <div className="col-md-3">
+                                <div className="col-md-"></div>
+                                <div className="col-md-4">
                                     <div>
                                         <p className="newFont link" onClick={this.openTerms}><u>Terms & Conditions</u></p>
                                         <input className="styled-checkbox" id="styled-checkbox-1" type="checkbox" checked={this.state.modalTermsCheckBox}></input>
@@ -242,11 +243,13 @@ class SignUpForm extends Component {
                             <div className="col-md-3"></div>
                         </div>
                     </div>
+
+
                     <div className="buttons container-fluid">
                         
                         <button className="signUpButton formButton col-md-2 " onClick={this.handleSubmit}>Sign Up</button>
                         <p className="agreementErrorStyle col-md-4 text-center">{this.state.errors.checkbox}</p>
-                        <p className="marginTop copyRight">&#169;Alterea Inc, 2020</p>
+                        <a className="marginTop copyRight" href="altereainc.com">&#169;Alterea Inc, 2020</a>
                     </div>
                 </div>
             </div>
