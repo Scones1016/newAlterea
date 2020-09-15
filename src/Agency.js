@@ -12,35 +12,42 @@ class Agency extends Component {
   render() {
     return (
       <div className="agencyContainer">
-        {this.props.agency === 'U.M.B.R.A' && 
+        {this.props.agency == 'U.M.B.R.A' && 
         <div>
         <div className="umbraCard">
           <h1 className="umbraHeading">{this.props.agency}</h1>
+          <h3 class="umbraSubHead">Unparalleled Members Beat Ruthless Arch-villains</h3>
           <p className="umbraText">
-            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
+          Training complete. <br></br>
+          Assigned Recruit name: {this.props.agentName}<br></br>
+          Assigned agency: U.M.B.R.A.
+          </p>
+          <p className="umbraText">
+            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>! You foiled Dr. Disinfo’s plans in the simulation. Keep in mind, however, that this was just a simulation — we have no idea what a man as dastardly as Dr. Disinfo could be cooking up in real life. <br></br><br></br>
             
-            Based on the results of your personality analysis we have assigned you to the <span className="highlight">U.M.B.R.A. Agency.</span><br></br>
-            You have high standards, a great eye for detail and enjoy the finer things in life. That's what it takes to be a member of an agency as elite as U.M.B.R.A.! We know you will excel here and will quickly become one of the brightest and the best.
+           Based on your decisions, we have assigned you to <span className="highlight">U.M.B.R.A.</span><br></br>
+            You may come off as arrogant to others, but you can’t help it: you’re charming, witty, stylish, and generally loveable. Self-confidence shouldn’t be a crime. Add in your knack for getting out of sticky situations unharmed, and you have everything it takes to be a member of an agency as elite as U.M.B.R.A. We know you will excel here. You clearly belong amongst the best. 
+
               <br/>
               <br/>
-              Good luck Agent, and remember: <span className="highlight">Always trust nobody. Ever.</span>
-            <br/>
-            <br/>
-        Let people know the results of your quiz!</p>
+              You will be receiving an email shortly from our director with further instructions. 
+              <br/>
+              <br/>
+              Good luck Agent, and remember: <span className="highlight">Always trust nobody. Ever.</span></p>
         <br/>
           <div className="col-md-12 d-flex justify-content-center text-center">
             <div className="col-md-1">
-            <FacebookShareButton url={"www.agentsagainstdisinfo.com"} quote={"U.M.B.R.A. agents are ambitious, capable, and sinfully charming. Dr. Disinfo doesn’t stand a chance. Be with the best. Join U.M.B.R.A."} hashtag={"#AgentsAgainstDisinfo"}>
+            <FacebookShareButton url={"www.agentsagainstdisinfo.com"} quote={"U.M.B.R.A. agents travel under the cover of night. Armed with charm in one hand and a knife in the other, agents seduce or stab any obstacle in their path. Their intensity might seem a tiny bit daunting to some, but to others it’s absolutely terrifying. Be with the best. Join U.M.B.R.A."} hashtag={"#teamumbra"}>
               <FacebookIcon size={32} round={true}/>
             </FacebookShareButton>
             </div>
             <div className="col-md-1">
-            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"U.M.B.R.A. agents are ambitious, capable, and sinfully charming. Dr. Disinfo doesn’t stand a chance. Be with the best. Join U.M.B.R.A."} hashtags={["AgentsAgainstDisinfo", "TeamUmbra"]}>
+            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"U.M.B.R.A. agents travel under the cover of night. Armed with charm in one hand and a knife in the other, agents seduce or stab any obstacle in their path. Their intensity might seem a tiny bit daunting to some, but to others it’s absolutely terrifying. Be with the best. Join U.M.B.R.A."} hashtags={["AgentsAgainstDisinfo", "teamumbra"]}>
               <TwitterIcon size={32} round={true}/>
             </TwitterShareButton>
             </div>
             <div className="col-md-1">
-            <WhatsappShareButton url={"www.agentsagainstdisinfo.com"} title={"U.M.B.R.A. agents are ambitious, capable, and sinfully charming. Dr. Disinfo doesn’t stand a chance. Be with the best. Join U.M.B.R.A."} separator={":"}>
+            <WhatsappShareButton url={"www.agentsagainstdisinfo.com"} title={"U.M.B.R.A. agents travel under the cover of night. Armed with charm in one hand and a knife in the other, agents seduce or stab any obstacle in their path. Their intensity might seem a tiny bit daunting to some, but to others it’s absolutely terrifying. Be with the best. Join U.M.B.R.A."} separator={":"}>
               <WhatsappIcon size={32} round={true}/>
             </WhatsappShareButton>
             </div>
@@ -53,30 +60,38 @@ class Agency extends Component {
 
         <div className="oracleCard">
           <h1 className="oracleHeading">{this.props.agency}</h1>
+          <h3 class="oracleSubHead">Our Righteous Agents Cancel Lame Evil
+</h3>
           <p className="oracleText">
-            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>! You foiled Dr. Disinfo's plans in the simulation.<br></br><br></br>
+            Training complete. <br></br>
+            Assigned Recruit Name: {this.props.agentName}<br></br>
+            Assigned Agency: O.R.A.C.L.E.
+          </p>
+
+          <p className="oracleText">
+            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>! You foiled Dr. Disinfo’s plans in the simulation. Keep in mind, however, that this was just a simulation — we have no idea what a man as dastardly as Dr. Disinfo could be cooking up in real life. <br></br><br></br>
             
-            Based on the results of your personality analysis we have assigned you to the <span className="highlight">O.R.A.C.L.E Agency.</span><br></br>
-            You are the pinnacle of adaptable, a confident agent, and an electric personality. That's what it takes to be a member of an agency as forward thinking as O.R.A.C.L.E.! 
-            We know you will excel here and will quickly become one of our leading visionaries.
+           Based on your decisions, we have assigned you to <span className="highlight">O.R.A.C.L.E.</span> While you may require seven alarms to wake up, you can always be counted on to get the job done when it matters most. You’re laid back and super fun to be around, yet you always surprise people with your deep thinking and creative problem solving. We know that you’ll fit right in at O.R.A.C.L.E.
+            <br/><br/>
+            You will be receiving an email shortly from our director with further instructions.
+            <br/>
             <br/>
             Good luck Agent, and remember: <span className="highlight">Always trust nobody. Ever.</span>
-            <br/>
-        Let people know the results of your quiz!</p>
+            </p>
         <br/>
           <div className="col-md-12 d-flex justify-content-center text-center">
             <div className="col-md-1">
-            <FacebookShareButton url={"www.agentsagainstdisinfo.com"} quote={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s ass."} hashtag={"#AgentsAgainstDisinfo"}>
+            <FacebookShareButton url={"www.agentsagainstdisinfo.com"} quote={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s butt."} hashtag={"#teamoracle"}>
               <FacebookIcon size={32} round={true}/>
             </FacebookShareButton>
             </div>
             <div className="col-md-1">
-            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s ass."} hashtags={["AgentsAgainstDisinfo,TeamOracle"]}>
+            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s butt."} hashtags={["AgentsAgainstDisinfo, teamoracle"]}>
               <TwitterIcon size={32} round={true}/>
             </TwitterShareButton>
             </div>
             <div className="col-md-1">
-            <WhatsappShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back.Together, we can be awesome and kick Dr. Disinfo’s ass."} separator={":"}>
+            <WhatsappShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s butt."} separator={":"}>
               <WhatsappIcon size={32} round={true}/>
             </WhatsappShareButton>
             </div>
