@@ -11,7 +11,7 @@ export default [
 	},
 	{
 		question: "You nod to Janet as she drives away from the Deluxe. Okay, time to do the thing. You enter through a revolving door and find yourself in a grandiose lobby, bustling with people. Now…how to find Dr. Disinfo?",
-		answers: ["> Threaten the concierge.","> Find a quiet corner and contact your agency HQ.","> Try to hack into the hotel’s database","> Slide a bribe to the bellhop"],
+		answers: ["> Threaten the concierge.","> Find a quiet corner and contact your agency HQ.","> Try to hack into the hotel’s database.","> Slide a bribe to the bellhop."],
 		messages: ["You walk up to concierge and casually reveal the stun gun in your waistband. “Where’s the Doctor?” you say, quiet enough so only she can hear. She pales. “He-He’s on the top floor. In the penthouse.” You make for the elevator.","Your call is picked up almost immediately by the promising young intern. He reveals they’ve just received some intel: Dr. Disinfo is on the top floor, in the penthouse. You thank him and head for the elevator.","Using your smartphone, you go through a backdoor into the hotel database and access the directory, which is, frankly, not very well protected. You quickly discover Disinfo’s location: penthouse suite, top floor. You make for the elevator.","You walk up to the bellhop and flash a winning smile.  “Where’s your boss?” you say slyly as you flash a crisp $100 bill. He narrows his eyes, then extends a hand and takes the money. “He’s on the top floor,” the bellhop says, pocketing the bill. “In the penthouse.” You nod and make for the elevator."]
 	},
 	{
@@ -21,7 +21,7 @@ export default [
 	},
 	{
 		question: "Just as you’re about to reach the top floor the elevator grinds to a halt. He cracks his knuckles and shrugs off his coat, revealing a very stylish Dr. Disinfo-brand T-shirt. How do you respond? ",
-		answers: ["> Back up against the wall and subtly press the open doors button","> He doesn't seem like such a tough guy. You can take him. "],
+		answers: ["> Back up against the wall and subtly press the open doors button.","> He doesn't seem like such a tough guy. You can take him. "],
 		messages: ["He walks closer, sneering at you. Then suddenly the doors open and you dash out, just beyond his outstretched arm. He follows, but you deliver a well-placed kick to his stomach, knocking him back into the elevator as the doors close. ", "You drop into a crouch as he throws his first punch, which slams into the wall right where your head should have been. You duck under his next punch, then counter with a well-placed elbow to his chin. He drops cold. You open the doors and exit to the hallway."]
 	},
 	{
@@ -36,7 +36,7 @@ export default [
 	},
 	{
 		question: "Just then, Disinfo’s aide enters the room and bows deeply: “Brunch is served, your evilness.” Disinfo’s stomach growls and he rushes from the room. Now’s your opportunity to escape! You’ve got some options.",
-		answers: ["> Strain against your bonds. Surely your arms of steel are strong enough to break them! ", "> Survey the room for something to help you escape. ", "> Reflect on the poor choices that brought you into this situation.", "> Call for the guard dog to bring you the keys"],
+		answers: ["> Strain against your bonds. Surely your arms of steel are strong enough to break them! ", "> Survey the room for something to help you escape. ", "> Reflect on the poor choices that brought you into this situation.", "> Call for the guard dog to bring you the keys."],
 		messages: ["With a mighty tug you break the leather straps! Freedom at last! ", "Your eyes fall upon a classy Disinfo-brand pen on a  nearby nightstand. Rocking your table, you manage to slowly move across the room until you can reach it with your fingertips. After a few seconds wiggling it in the lock, you’re free.", "In your contemplation, you realize that the restraints are slightly too big for your slim wrists. With a little work, you manage to wriggle your hands free. A moment later, your legs are free too.", "You’ve seen enough movies to know there’s usually a guard dog with keys. Magically, a guard dog appears with a gleaming silver key, placing it delicately in your palm. You’re free."]
 	},
 	{
@@ -51,7 +51,7 @@ export default [
 	},
 	{
 		question: "You make it to the exterior of the hotel where there are plenty of vehicles by the curb, each with a Dr. Disinfo insignia. Time to pick your getaway vehicle.",
-		answers: ["> A slick matte black Aston Martin.", "> A plain van that probably has some really high-tech stuff in it.", "> A dashing red convertible with chrome highlights.", "> A low-profile Prius"],
+		answers: ["> A slick matte black Aston Martin.", "> A plain van that probably has some really high-tech stuff in it.", "> A dashing red convertible with chrome highlights.", "> A low-profile Prius."],
 		messages: ["“I’m sorry,” you whimper as you brace your elbow and smash through the glass. Climbing through the window you pop open the dashboard and hotwire the car.", "Lo and behold: the trunk is adorned with screens of all sizes, each flooded with lines of code, technical readouts, maps, graphs, and apps. Even better: the keys are in the ignition. It’s your lucky day.", "You slide across the hood of the car like a freakin’ badass and hop into the driver’s seat. Popping open the dashboard below the steering wheel and connecting two red wires, you hotwire the car.", "Ah yes, the mark of a true agent. You pop open the dashboard below the steering wheel and connect the two red wires, hotwiring the car."]
 	},
 	{

@@ -155,7 +155,7 @@ class LoginForm extends Component {
                     <div className="col-md-6 text-left">
                             <form className="col-md-12 d-flex flex-column">
                                 <h1 className="signUpHeader">LOG IN</h1>
-                                    <h3 className="logInOption">DON'T HAVE AN ACCOUNT? SIGN UP <u><span className="link" onClick={this.redirectToSignUp}>HERE</span></u>.</h3>
+                                    <h3 className="logInOption">DON'T HAVE AN ACCOUNT? SIGN UP <u><span onClick={this.redirectToSignUp}>HERE</span></u>.</h3>
                                 <input className="marginBetween text-center input" type="email" id="email" name="email" placeholder="EMAIL" value={this.state.input.email} onChange={this.handleChange}/>
                                 <p className="errorStyle">{this.state.errors.email}</p>
                                 <input className="marginBetween text-center input" type="password" placeholder="PASSWORD" name="password" value={this.state.input.password} onChange={this.handleChange}/>

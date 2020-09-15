@@ -216,7 +216,7 @@ input[type="text"]
 
 .modalWidth {
   min-width: 70%;
-  min-height: 50%;
+  min-height: 20%;
 }
 
 .modalButton {
@@ -297,6 +297,14 @@ a:hover {
 
 .newFont {
     font-family: 'Montserrat', sans-serif;
+    font-size: 0.9em;
+}
+.link{
+  padding: 5px 10px;
+  border: none;
+}
+.link:hover{
+  text-decoration: underline;
 }
 
 .confirmation {
@@ -381,3 +389,11 @@ a:hover {
   bottom: 10px;
   text-align: center;
 }
+
+
+span.cls_004{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: underline}
+div.cls_004{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_003{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+div.cls_003{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
+span.cls_002{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+div.cls_002{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
