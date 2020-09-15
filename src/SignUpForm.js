@@ -173,17 +173,21 @@ class SignUpForm extends Component {
             <div className="wrapper" onClick={this.closeAllModals}>
           <div className="containerClass">
                 <div className="content text-center container-fluid">
-                    <a href="https://www.altereainc.com/about" className="noStyle newFont"><p className="marginTop">About Us</p></a>
-                    <div className="row marginTop">
-                        <div className="col-md-6 text-right">
+                    <div className="row marginTop topRow">
+                        <div className="col-md-6 text-right titles">
                             <p className="title">Welcome,</p>
-                            <p className="title">Agent</p>
+                            <p className="title">Recruit</p>
+                            <p className="intro">The evil Dr. Disinfo is planning to poison Hawaiian pizza around the country. If ingested, it turns people into robo-zombie-werewolf-vampire-mummies. The only thing standing in his way is you: our new agency recruits. This is your chance to save the world.
+
+This recruitment is run by U.M.B.R.A. and O.R.A.C.L.E., two rival spy agencies led by siblings codenamed Artemis and Apollo who are temporarily joining forces to defeat the mad doctor. Based on your spy characteristics, one of these two agencies will select you to join their ranks. 
+
+Starting on October 4th, you will complete a short digital mission every day, each following the digital trail left behind by Dr. Disinfo. Through this experience you will traverse social media platforms and websites to discover hidden clues, play mini games with live actors, and score points for quickly and successfully completing your missions. The strongest recruits from each day will be chosen to represent their agencies in the final confrontation with Dr. Disinfo, which will take place on October 10th: his birthday. </p>
                         </div>
                         <div className="col-md-6 text-left">
 
                                 <form className="col-md-12 d-flex flex-column">
                                     <h1 className="signUpHeader">CREATE AN ACCOUNT</h1>
-                                    <h3 className="logInOption">ALREADY HAVE AN ACCOUNT? <u><span className="link" onClick={this.redirectToLogin}>LOG IN.</span></u></h3>
+                                    <h3 className="logInOption">ALREADY HAVE AN ACCOUNT? <u><span onClick={this.redirectToLogin}>LOG IN.</span></u></h3>
                                     <input className="marginBetween text-center input" type="text" id="username" name="username" placeholder="FULL NAME" value={this.state.input.username} onChange={this.handleChange}/>
                                     <p className="errorStyle">{this.state.errors.username}</p>
                                     <input className="marginBetween text-center input" type="email" id="email" name="email" placeholder="EMAIL" value={this.state.input.email} onChange={this.handleChange}/>
@@ -198,17 +202,23 @@ class SignUpForm extends Component {
                     <br/>
                     <br/>
                     <div className="col-md-12 text-center duplicateEmailError">{this.state.errors.duplicateEmail}</div>
+
+
                     <div className="text-center container-fluid">
-                        <div className="row mt-5">
+                        <div className="row ">
                             <div className="col-md-3"></div>
                             <div className="col-md-6 row">
-                                <div className="col-md-1"></div>
-                                <div className="col-md-3">
+                                <div className="col-md-"></div>
+                                <div className="col-md-4">
                                     <div>
-                                        <p className="newFont link" onClick={this.openTerms}><u>Terms & Conditions</u></p>
+                                        <button className="newFont link" onClick={this.openTerms}>Terms & Conditions</button>
                                         <input className="styled-checkbox" id="styled-checkbox-1" type="checkbox" checked={this.state.modalTermsCheckBox}></input>
+<<<<<<< HEAD
                                         <label for="styled-checkbox-1"></label>
                                         <ModalDemo modalOption={0} checkBoxState={this.state.modalTermsCheckBox} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms} mError={this.state.modalErrors[0]} changeState={this.changeTermsState} mStatement={this.state.modalStatements[0]} ref={dialog => this.dialogInstance = dialog}/>
+=======
+                                        <ModalDemo modalOption={0} checkBoxState={this.state.modalTermsCheckBox} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms} mError={this.state.modalErrors[0]} changeState={this.changeTermsState} mStatement={this.state.modalStatements[0]}/>
+>>>>>>> 4bcb8ed95e7abd6ce621e3b621a1bcc3270e4f8a
                                     </div>
                                 </div>
                                 <div className="col-md-1">
@@ -216,9 +226,8 @@ class SignUpForm extends Component {
                                 </div>
                                 <div className="col-md-3">
                                     <div>
-                                        <p className="newFont link" onClick={this.openUser}><u>Game Rules</u></p>
+                                        <button className="newFont link" onClick={this.openUser}>Game Rules</button>
                                         <input className="styled-checkbox" id="styled-checkbox-2" type="checkbox" checked={this.state.modalUserCheckBox}></input>
-                                        <label for="styled-checkbox-2"></label>
                                         <ModalDemo modalOption={1} checkBoxState={this.state.modalUserCheckBox} isOpen={this.state.isUserModalOpen} mTitle={this.state.modalTitles[1]} mText={this.state.modalTexts[1]} hideDialog={this.hideUser} mError={this.state.modalErrors[1]} changeState={this.changeUsersState} mStatement={this.state.modalStatements[1]}/>
                                     </div>
                                 </div>
@@ -227,9 +236,8 @@ class SignUpForm extends Component {
                                 </div>
                                 <div className="col-md-3">
                                     <div>
-                                        <p className="newFont link" onClick={this.openPrivacy}><u>Privacy Policy</u></p>
+                                        <button className="newFont link" onClick={this.openPrivacy}>Privacy Policy</button>
                                         <input className="styled-checkbox" id="styled-checkbox-3" type="checkbox" checked={this.state.modalPrivacyCheckBox}></input>
-                                        <label for="styled-checkbox-3"></label>
                                         <ModalDemo modalOption={2} checkBoxState={this.state.modalPrivacyCheckBox} isOpen={this.state.isPrivacyModalOpen} mTitle={this.state.modalTitles[2]} mText={this.state.modalTexts[2]} hideDialog={this.hidePrivacy} mError={this.state.modalErrors[2]} changeState={this.changePrivacyState} mStatement={this.state.modalStatements[2]}/>
                                     </div>
                                 </div>
@@ -237,11 +245,13 @@ class SignUpForm extends Component {
                             <div className="col-md-3"></div>
                         </div>
                     </div>
+
+
                     <div className="buttons container-fluid">
                         
                         <button className="signUpButton formButton col-md-2 " onClick={this.handleSubmit}>Sign Up</button>
                         <p className="agreementErrorStyle col-md-4 text-center">{this.state.errors.checkbox}</p>
-                        <p className="marginTop copyRight">&#169;Alterea Inc, 2020</p>
+                        <a className="marginTop copyRight" target="_blank" href="https://www.altereainc.com">&#169;Alterea Inc, 2020</a>
                     </div>
                 </div>
             </div>

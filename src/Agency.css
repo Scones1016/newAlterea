@@ -7,6 +7,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Yellowtail&display=swap");
+
 ​
 
 ​
@@ -64,13 +70,12 @@ button:focus {
     text-align: center;
     font-family: Righteous, sans-serif;
     font-weight: bold;
-    font-size: 4em;
+    font-size: 5em;
     color: #d83a00;
-    margin-bottom: 20px;
 }
 
 .umbraCard .umbraText{
-    font-family: Courier New, monospace;
+    font-family: Roboto Mono, monospace;
     font-size: 20px;
     line-height: 1.2em;
     margin-bottom: 30px;
@@ -85,7 +90,7 @@ button:focus {
   
   .umbraCard .proceedButton{
   
-    font-family: Courier New, monospace;
+    font-family: Roboto Mono, monospace;
   
     font-size: 1.3em;
   
@@ -113,9 +118,24 @@ button:focus {
   
   }
 
+.umbraSubHead{
+    font-family: Yellowtail, cursive;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.oracleSubHead{
+    font-family: Ubuntu, sans-serif;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #67acb2;
+}
+
 .oracleCard{
     background-image: url('./images/oracle_logo.png');
-    background-color: black;
+    background-color: #0a0a0a;
     background-repeat: no-repeat;
     background-position: 50% 30%;
     background-size: 350px auto;
@@ -133,7 +153,7 @@ button:focus {
     margin-top: 25px;
     color: white;
     font-size: 1.3em;
-    font-family: Courier New, monospace;
+    font-family: Roboto Mono, monospace;
 }
   
 .oracleCard .highlight{
