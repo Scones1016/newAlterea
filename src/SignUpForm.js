@@ -190,11 +190,10 @@ class SignUpForm extends Component {
                         <div className="col-md-6 text-right titles">
                             <p className="title">Welcome,</p>
                             <p className="title">Recruit</p>
-                            <p className="intro">The evil Dr. Disinfo is planning to poison Hawaiian pizza around the country. If ingested, it turns people into robo-zombie-werewolf-vampire-mummies. The only thing standing in his way is you: our new agency recruits. This is your chance to save the world.
+                            <p className="intro">The evil Dr. Disinfo is planning to poison Hawaiian pizza around the country that will turn people into robo-zombie-werewolf-vampire-mummies. The only thing standing in his way is you: our new agency recruits. <br></br><br></br>
 
-This recruitment is run by U.M.B.R.A. and O.R.A.C.L.E., two rival spy agencies led by siblings codenamed Artemis and Apollo who are temporarily joining forces to defeat the mad doctor. Based on your spy characteristics, one of these two agencies will select you to join their ranks. 
-
-Starting on October 4th, you will complete a short digital mission every day, each following the digital trail left behind by Dr. Disinfo. Through this experience you will traverse social media platforms and websites to discover hidden clues, play mini games with live actors, and score points for quickly and successfully completing your missions. The strongest recruits from each day will be chosen to represent their agencies in the final confrontation with Dr. Disinfo, which will take place on October 10th: his birthday. </p>
+Join one of two rival spy agencies and complete a short digital mission every day starting October 4th that will take you across social media platforms and websites to discover hidden clues and have live interactions with characters. The strongest recruits will represent their agencies at the final confrontation with Dr. Disinfo on October 10th, his birthday. 
+ </p>
                         </div>
                         <div className="col-md-6 text-left">
 

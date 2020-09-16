@@ -33,7 +33,7 @@ class Quiz extends Component {
             finalQuestion: false,
             agency: '',
             agentName: '',
-            calibratingMessage: 'CALIBRATING...',
+            calibratingMessage: 'CALIBRATING',
             isBackButtonClicked: false,
             email: this.props.location.state.email,
             image: "./quizImages/quizPic",
