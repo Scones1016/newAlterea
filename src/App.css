@@ -64,15 +64,24 @@
   position: absolute;
 }
 
-.intro{
+.introLeft{
   font-family: Courier Prime, sans-serif;
   font-size: 1em;
-  line-height:1.8em ;
+  line-height:1.5em ;
   text-align: right;
-  width: 600px;
+  width: 90%;
+  max-width: 500px;
   float: right;
 }
-
+.introRight{
+  font-family: Courier Prime, sans-serif;
+  font-size: 1em;
+  line-height:1.5em ;
+  text-align: left;
+  width: 90%;
+  max-width: 500px;
+  float: left;
+}
 
 .marginTop {
   margin-top: 5%;
@@ -94,6 +103,13 @@
   font-size: 50pt;
   font-family: 'Montserrat Subrayada', sans-serif;
 }
+.rightTitle {
+  color: white;
+  text-transform: uppercase;
+  line-height: 1em;
+  font-size: 30pt;
+  font-family: 'Montserrat Subrayada', sans-serif;
+}
 .titleSignIn{
   margin-top: 15px;
   font-size: 50pt;
@@ -112,7 +128,7 @@
   font-family: 'Roboto Mono', sans-serif;
   font-weight: 300;
   font-weight: 300;
-  font-size: 12px;
+  font-size: 18px;
   text-transform: capitalize;
 }
 
@@ -134,26 +150,47 @@
 }
 
 
-.signUpHeader{
+.signUpForm .signUpHeader{
   font-family:'Montserrat', sans-serif;
   font-size: 1.8em;
   margin-top: 20px;
-  float: left;
-  width: 500px;
-  margin-left: 20px;
+  width: 350px;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+.logInForm .signUpHeader{
+  font-family:'Montserrat', sans-serif;
+  font-size: 1.8em;
+  margin-top: 20px;
+  width: 350px;
+}
+
 .logInOption{
   font-family:'Montserrat', sans-serif;
-  margin-left: 20px;
   font-size: 1em;
 }
 
-.marginBetween {
+.signUpForm .marginBetween {
   margin-top: 2%;
-  margin-left: 20px;
   color: black;
   font-family: 'Roboto Mono', sans-serif;
   font-weight: 300;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logInForm .marginBetween {
+  margin-top: 2%;
+  color: black;
+  font-family: 'Roboto Mono', sans-serif;
+  font-weight: 300;
+  float: left;
+}
+
+.logInForm .signUpHeader{
+  margin-left: 0 px;
+  margin-right: 0 px;
 }
 
 .styled-checkbox {
@@ -209,7 +246,7 @@
 
 .input{
   height: 30px;
-  width: 400px;
+  width: 320px;
   font-family: Courier New, sans-serif;
 }
 
@@ -484,3 +521,4 @@ a:hover {
      */
     animation-delay: .4s;
 }
+
