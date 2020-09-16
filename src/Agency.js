@@ -12,7 +12,7 @@ class Agency extends Component {
   render() {
     return (
       <div className="agencyContainer">
-        {this.props.agency === 'U.M.B.R.A' && 
+        {this.props.agency === 'U.M.B.R.A.' && 
         <div>
         <div className="umbraCard">
           <h1 className="umbraHeading">{this.props.agency}</h1>
@@ -22,7 +22,7 @@ class Agency extends Component {
           Assigned agency: U.M.B.R.A.
           </p>
           <p className="umbraText">
-            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
+            Congratulations, <span className="highlight">Agent {this.props.agentName}!</span><br></br><br></br>
             
            Based on your decisions, we have assigned you to <span className="highlight">U.M.B.R.A.</span><br></br>
             You may come off as arrogant to others, but you can’t help it: you’re charming, witty, stylish, and generally loveable. Self-confidence shouldn’t be a crime. You have everything it takes to be a member of an agency as elite as U.M.B.R.A. You clearly belong amongst the best.
@@ -55,7 +55,7 @@ class Agency extends Component {
         </div>
         </div>
         }
-        {this.props.agency !== 'U.M.B.R.A' && 
+        {this.props.agency !== 'U.M.B.R.A.' && 
         <div>
 
         <div className="oracleCard">
@@ -68,7 +68,7 @@ class Agency extends Component {
           </p>
 
           <p className="oracleText">
-            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
+            Congratulations, <span className="highlight">Agent {this.props.agentName}!</span><br></br><br></br>
             
            Based on your decisions, we have assigned you to <span className="highlight">O.R.A.C.L.E.</span> While you may require seven alarms to wake up, you can always be counted on to get the job done when it matters most. You’re laid back and super fun to be around, yet you always surprise people with your deep thinking and creative problem solving. We know that you’ll fit right in at O.R.A.C.L.E.
             <br/><br/>
