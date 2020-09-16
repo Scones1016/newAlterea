@@ -21,6 +21,7 @@ import quizPic8 from "./quizImages/quizPic8.jpg";
 import quizPic9 from "./quizImages/quizPic9.jpg";
 import quizPic10 from "./quizImages/quizPic10.jpg";
 
+
 class Quiz extends Component {
     constructor(props) {
         super(props);
@@ -36,8 +37,7 @@ class Quiz extends Component {
             calibratingMessage: 'CALIBRATING',
             isBackButtonClicked: false,
             email: this.props.location.state.email,
-            image: "./quizImages/quizPic",
-            quizAnswered: false
+            image: "./quizImages/quizPic"
         }
         this.nextQuestion = this.nextQuestion.bind(this);
         this.createAnswerJsonFile = this.createAnswerJsonFile.bind(this);
@@ -47,7 +47,7 @@ class Quiz extends Component {
 
     onBackButtonEvent = (e) => {
         e.preventDefault();
-            if (!window.confirm("Are you sure you want to go back? We'll lose all your answers!")) {
+            if (window.confirm("Are you sure you want to leave? We'll lose your answers!")) {
                 this.isBackButtonClicked = true;
             } 
             else {
@@ -110,9 +110,13 @@ class Quiz extends Component {
         var userAnswers = {};
         userAnswers["email"] = this.props.location.state.email;
         userAnswers["answer"] = this.state.answerJsonFile;
+<<<<<<< HEAD
         console.log(userAnswers);
         var url = "http://localhost:5000/quiz";
         console.log(url);
+=======
+        var url = "https://backend.defeatdis.info/quiz";
+>>>>>>> a13463a6df3cbf06ff61c204d7527aef8c9340f5
         const axios = require('axios');
         axios.get(url, {
             params : userAnswers
@@ -123,7 +127,7 @@ class Quiz extends Component {
                 agency = agency.toUpperCase();
                 var agencyArray = agency.split("").join('.');
                 this.setState({
-                    agency: agencyArray+".",
+                    agency: agencyArray,
                     agentName: response.data.agentName
                 })
             })
@@ -164,7 +168,7 @@ class Quiz extends Component {
                         { this.state.nr === 6 && <img src={quizPic6} width="500" height="300" className="mx-auto mb-5"/>}  
                         { this.state.nr === 7 && <img src={quizPic7} width="500" height="300" className="mx-auto mb-5"/>}  
                         { this.state.nr === 8 && <img src={quizPic8} width="500" height="300" className="mx-auto mb-5"/>} 
-                        { this.state.nr === 9 && <img src={quizPic8} width="500" height="300" className="mx-auto mb-5"/>} 
+                        { this.state.nr === 9 && <img src={quizPic9} width="500" height="300" className="mx-auto mb-5"/>} 
                         { this.state.nr === 10 && <img src={quizPic6} width="500" height="300" className="mx-auto mb-5"/>} 
                         { this.state.nr === 11 && <img src={quizPic9} width="500" height="300" className="mx-auto mb-5"/>} 
                         { this.state.nr === 12 && <img src={quizPic10} width="500" height="300" className="mx-auto mb-5"/>}         

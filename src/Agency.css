@@ -63,7 +63,7 @@ button:focus {
     background-image: url("images/umbra_background.png");
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: 500px auto;
+    background-size: 100% auto;
 }
 
 .umbraCard .umbraHeading{
@@ -118,6 +118,13 @@ button:focus {
   
   }
 
+.date{
+    display: block;
+    font-size: 1.6em;
+    font-weight: bold;
+    text-align: center;
+}
+
 .umbraSubHead{
     font-family: Yellowtail, cursive;
     text-align: center;
@@ -134,12 +141,11 @@ button:focus {
 }
 
 .oracleCard{
-    background-image: url('./images/oracle_logo.png');
     background-color: #0a0a0a;
+    background-image: url("images/oracle_logo.png");
     background-repeat: no-repeat;
-    background-position: 50% 30%;
-    background-size: 350px auto;
-    height: auto;
+    background-position: 50% 50%;
+    background-size: 100% auto;
   }
   
 .oracleCard .oracleHeading{
@@ -167,13 +173,6 @@ button:focus {
     margin-left: auto;
     margin-right: auto;
     border-radius: 30px;
-}
-
-.date{
-    display: block;
-    font-size: 1.6em;
-    font-weight: bold;
-    text-align: center;
 }
 
 .agencyFooter {
