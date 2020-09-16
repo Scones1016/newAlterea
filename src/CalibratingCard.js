@@ -8,7 +8,7 @@ class CalibratingCard extends Component {
     render() {
         return (
             <div className="card calibratingCard">
-                        <p className="calibratingText">{this.props.calibratingMessage}</p>
+                        <p className="calibratingText saving">{this.props.calibratingMessage}<span>.</span><span>.</span><span>.</span></p>
             </div>
         );
     }
