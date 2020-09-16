@@ -161,7 +161,7 @@ class SignUpForm extends Component {
 
         if(this.state.modalTermsCheckBox !== true || this.state.modalUserCheckBox !== true || this.state.modalPrivacyCheckBox !== true) {
             isValid = false;
-            errors["checkbox"] = "You must agree to our Terms and Conditions before being able to login to the dashboard.";
+            errors["checkbox"] = "You must agree to our Terms and Conditions, Game Rules, and Privacy Policy before being able to login to the dashboard.";
         }
 
 
