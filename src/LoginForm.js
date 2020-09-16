@@ -150,7 +150,7 @@ class LoginForm extends Component {
                     <div className="col-md-6 text-right">
                         <p className="title titleSignIn">Welcome Back, <br></br>Recruit</p>
                     </div>
-                    <div className="col-md-6 text-left logInForm">
+                    <div className="col-md-6 text-left">
                             <form className="col-md-12 d-flex flex-column">
                                 <h1 className="signUpHeader">LOG IN</h1>
                                     <h3 className="logInOption">DON'T HAVE AN ACCOUNT? SIGN UP <u><span onClick={this.redirectToSignUp}>HERE</span></u>.</h3>

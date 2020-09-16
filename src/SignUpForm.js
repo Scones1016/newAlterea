@@ -174,14 +174,15 @@ class SignUpForm extends Component {
           <div className="containerClass">
                 <div className="content text-center container-fluid">
                     <div className="row marginTop topRow">
-                        <div className="col-md-4 text-right titles">
+                        <div className="col-md-6 text-right titles">
                             <p className="title">Welcome,</p>
                             <p className="title">Recruit</p>
-                            <p className="introLeft">The evil Dr. Disinfo is planning to poison Hawaiian pizza around the country. If ingested, it turns people into robo-zombie-werewolf-vampire-mummies. The only thing standing in his way is you: our new agency recruits. This is your chance to save the world.
+                            <p className="intro">The evil Dr. Disinfo is planning to poison Hawaiian pizza around the country that will turn people into robo-zombie-werewolf-vampire-mummies. The only thing standing in his way is you: our new agency recruits. <br></br><br></br>
 
+Join one of two rival spy agencies and complete a short digital mission every day starting October 4th that will take you across social media platforms and websites to discover hidden clues and have live interactions with characters. The strongest recruits will represent their agencies at the final confrontation with Dr. Disinfo on October 10th, his birthday. 
  </p>
                         </div>
-                        <div className="col-md-4 signUpForm text-center">
+                        <div className="col-md-6 text-left">
 
                                 <form className="col-md-12 d-flex flex-column">
                                     <h1 className="signUpHeader">CREATE AN ACCOUNT</h1>
@@ -196,14 +197,6 @@ class SignUpForm extends Component {
                                     <div className="errorStyle">{this.state.errors.confirmPassword}</div>
                                 </form>
                         </div>
-                        <div className="col-md-4 text-left titles">
-                            <p className="rightTitle">Agents Wanted!</p>
-                            <p className="introRight">U.M.B.R.A. and O.R.A.C.L.E., two rival spy agencies led by siblings Artemis and Apollo, are temporarily joining forces to defeat the mad doctor. Sign up today to join an Agency! <br></br><br></br>
-
-                            Starting on October 4th, you will complete daily short digital missions, each following the trail of Dr. Disinfo. You will traverse social media platforms and websites, play mini games with live actors, and score points for completing missions. The strongest recruits from each day will represent their Agency in the final confrontation on October 10th with Dr. Disinfo.
-
-                             </p>
-                        </div>
                     </div>
                     <br/>
                     <br/>
@@ -214,6 +207,7 @@ class SignUpForm extends Component {
                         <div className="row ">
                             <div className="col-md-3"></div>
                             <div className="col-md-6 row">
+                                <div className="col-md-"></div>
                                 <div className="col-md-4">
                                     <div>
                                         <button className="newFont link" onClick={this.openTerms}>Terms & Conditions</button>

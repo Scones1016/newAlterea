@@ -85,7 +85,7 @@ class Agency extends Component {
             </FacebookShareButton>
             </div>
             <div className="col-md-1">
-            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s butt."} hashtags={["AgentsAgainstDisinfo", "teamumbra"]}>
+            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s butt."} hashtags={["AgentsAgainstDisinfo, teamoracle"]}>
               <TwitterIcon size={32} round={true}/>
             </TwitterShareButton>
             </div>
