@@ -101,9 +101,8 @@ class SignUpForm extends Component {
             axios.get(url, {
                 params : data
             })
-            .then((response) => response.json())
-            .then((data) => {
-                if(data.msg === "error") {
+            .then( response => {
+                if(response.data.msg === "error") {
                     var errors = {};
                     errors.confirmPassword = "Email Already In Use";
                     this.setState({ errors: errors});
@@ -111,7 +110,8 @@ class SignUpForm extends Component {
                 else {
                     this.props.history.push("/quizIntro");
                 }
-            });
+            })
+            .catch(e=>console.log(e))
         }
     }
 
