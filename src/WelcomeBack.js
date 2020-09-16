@@ -4,7 +4,7 @@ import logo from './logo.svg';
 import './Agency.css';
 import { FacebookShareButton, TwitterShareButton, WhatsappShareButton, FacebookIcon, InstapaperShareButton, InstapaperIcon, TwitterIcon, WhatsappIcon } from "react-share";
 
-class Agency extends Component {
+class WelcomeBack extends Component {
   constructor(props) {
     super(props);
   }
@@ -22,18 +22,21 @@ class Agency extends Component {
           Assigned agency: U.M.B.R.A.
           </p>
           <p className="umbraText">
-            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
+            Welcome back, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
             
-           Based on your decisions, we have assigned you to <span className="highlight">U.M.B.R.A.</span><br></br>
-            You may come off as arrogant to others, but you can’t help it: you’re charming, witty, stylish, and generally loveable. Self-confidence shouldn’t be a crime. You have everything it takes to be a member of an agency as elite as U.M.B.R.A. You clearly belong amongst the best.
+           We hope you are enjoying your time on our social media training grounds and have been preparing well to face Dr. Disinfo very soon. We look forward to seeing you here on... 
 
 
+             <span class="date">October 4th at 9am PST</span>
+
+              <br/>
+              Warmest Regards, 
               <br/>
               <br/>
-              You will be receiving an email shortly from our director with further instructions. 
+              Nighthawk
               <br/>
-              <br/>
-              Good luck Agent, and remember: <span className="highlight">Trust no one. </span></p>
+              U.M.B.R.A. Tech Specialist and Handler
+        </p>
         <br/>
           <div className="col-md-12 d-flex justify-content-center text-center">
             <div className="col-md-1">
@@ -68,14 +71,22 @@ class Agency extends Component {
           </p>
 
           <p className="oracleText">
-            Congratulations, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
+            Glad to see you back, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
             
-           Based on your decisions, we have assigned you to <span className="highlight">O.R.A.C.L.E.</span> While you may require seven alarms to wake up, you can always be counted on to get the job done when it matters most. You’re laid back and super fun to be around, yet you always surprise people with your deep thinking and creative problem solving. We know that you’ll fit right in at O.R.A.C.L.E.
+          Hope you’re having a good time out on the social media training grounds and have been preparing well to face Dr. Disinfo very soon. Looking forward to seeing you here on... 
+
             <br/><br/>
-            You will be receiving an email shortly from our director with further instructions.
-            <br/>
-            <br/>
-            Good luck Agent, and remember: <span className="highlight">Always trust nobody. Ever.</span>
+
+            <span class="date">October 4th at 9am PST</span>
+
+
+              <br/>
+              See you soon!
+              <br/>
+              <br/>
+              Clotho
+              <br/>
+              O.R.A.C.L.E. Tech Operative and Your Handler
             </p>
         <br/>
           <div className="col-md-12 d-flex justify-content-center text-center">
@@ -85,7 +96,7 @@ class Agency extends Component {
             </FacebookShareButton>
             </div>
             <div className="col-md-1">
-            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s butt."} hashtags={["AgentsAgainstDisinfo", "teamumbra"]}>
+            <TwitterShareButton url={"www.agentsagainstdisinfo.com"} title={"If you’ve recently experienced uncontrollably chill vibes, recurring bouts of procrastination, sudden fits of 3AM inspiration, or the inexplicable urge to adopt a llama, know you are not alone. O.R.A.C.L.E. has your back. Together, we can be awesome and kick Dr. Disinfo’s butt."} hashtags={["AgentsAgainstDisinfo, teamoracle"]}>
               <TwitterIcon size={32} round={true}/>
             </TwitterShareButton>
             </div>
@@ -106,4 +117,4 @@ class Agency extends Component {
   }
 }
 
-export default Agency;
+export default WelcomeBack;
