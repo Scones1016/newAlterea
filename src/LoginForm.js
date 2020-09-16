@@ -23,11 +23,7 @@ class LoginForm extends Component {
                 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.'
             ],
             input: {},
-            errors: {},
-            forgotPassword: false,
-            isQuizAnswered: false,
-            agency: '',
-            agentName: ''
+            errors: {}
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -82,7 +78,6 @@ class LoginForm extends Component {
             })
             .then(
                 response=> {
-                    console.log(response);
                     if(response.data.msg === "error")
                     {
                         console.log("HELLO IN ERROR");
@@ -246,7 +241,7 @@ class LoginForm extends Component {
                     <div className="col-md-6 text-right">
                         <p className="title titleSignIn">Welcome Back, <br></br>Recruit</p>
                     </div>
-                    <div className="col-md-6 text-left">
+                    <div className="col-md-6 text-left logInForm">
                             <form className="col-md-12 d-flex flex-column">
                                 <h1 className="signUpHeader">LOG IN</h1>
                                     <h3 className="logInOption">DON'T HAVE AN ACCOUNT? SIGN UP <u><span className="clickAction" onClick={this.redirectToSignUp}>HERE</span></u>.</h3>
@@ -254,19 +249,18 @@ class LoginForm extends Component {
                                 <p className="errorStyle">{this.state.errors.email}</p>
                                 <input className="marginBetween text-center input" type="password" placeholder="PASSWORD" name="password" value={this.state.input.password} onChange={this.handleChange}/>
                                 <p className="errorStyle">{this.state.errors.password}</p>
-                                <p className="logInOption underLine" onClick={this.forgotPassword}>Forgot Password?</p>
                             </form>
                     </div>
                 </div>
-
 
                
 
                 <button className="signUpButton formButton signInButton" onClick={this.handleSubmit}>LOG IN</button>
 
                 <a className="marginTop copyRight" href="altereainc.com">&#169;Alterea Inc, 2020</a>
-            </div>}
-          </div> 
+            </div>
+            }
+          </div>
         );
     }
 }

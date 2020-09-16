@@ -111,7 +111,7 @@ class Quiz extends Component {
         userAnswers["email"] = this.props.location.state.email;
         userAnswers["answer"] = this.state.answerJsonFile;
         console.log(userAnswers);
-        var url = "http://localhost:5000/quiz";
+        var url = "https://backend.defeatdis.info/quiz";
         console.log(url);
         const axios = require('axios');
         axios.get(url, {
