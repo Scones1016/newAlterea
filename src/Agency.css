@@ -175,13 +175,6 @@ button:focus {
     border-radius: 30px;
 }
 
-.date{
-    display: block;
-    font-size: 1.6em;
-    font-weight: bold;
-    text-align: center;
-}
-
 .agencyFooter {
     width: 200px;
     margin-left: auto;

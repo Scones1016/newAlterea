@@ -95,32 +95,19 @@ class SignUpForm extends Component {
     handleSubmit() {
         if(this.validate()) {
             var data = this.state.input;
-            var url = "http://localhost:5000/signup";
-            var data = this.state.input; 
-            const axios = require('axios');
-            axios.get(url, {
-                params : data
+            fetch("https://backend.defeatdis.info/signup?password="+data.password+"&username="+data.username+"&email="+data.email+"&confirmPassword="+data.password, {
             })
-            .then(
-                response=> {
-                    console.log(response);
-                    if(response.data.msg === "error")
-                    {
-                        var errors = {};
-                        errors["confirmPassword"] = "Please enter valid email address / password";
-                        this.setState({ errors: errors});
-                    }
-                    else {
-                        var email = this.state.input["email"];
-                        var input = {};
-                        this.setState({ input: input});
-                        this.props.history.push(
-                            '/quizIntro',
-                            { email: email}
-                          );
-                    }
-            })
-            .catch(e=>console.log(e))
+            .then((response) => response.json())
+            .then((data) => {
+                if(data.msg === "error") {
+                    var errors = {};
+                    errors.confirmPassword = "Email Already In Use";
+                    this.setState({ errors: errors});
+                }
+                else {
+                    this.props.history.push("/quizIntro");
+                }
+            });
         }
     }
 

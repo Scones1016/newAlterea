@@ -3,16 +3,10 @@ import logo from './logo.svg';
 import './quiz.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
-import Agency from './Agency';
 
 class QuizIntro extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isQuizAnswered: this.props.isQuizAnswered,
-      agency: this.props.agency,
-      agentName: this.props.agentName
-    }
     this.redirectToQuiz = this.redirectToQuiz.bind(this);
   }
 
@@ -26,7 +20,6 @@ class QuizIntro extends Component {
   render() {
     return (
       <div className="container">
-        
         <div className="card cardBeforeYouBegin">
 
           <p className="quizQuestion">Welcome to the <span className="highlight">Virtual Training Simulation</span>. Recent intel suggests Dr. Disinfo has been planning something to do with pineapples and pizzas in his secret hideout within his fancy hotel in downtown Los Angeles. Your mission is to<span className="highlight"> infiltrate Dr. Disinfo’s penthouse hotel suite </span> and foil his plans. Intel shows he owns the hotel and uses it as a cover for his operations, so trust nobody.</p>
@@ -37,6 +30,7 @@ class QuizIntro extends Component {
         <div className="footer">
           <p className="copyRight">&#169;Alterea Inc, 2020</p>
         </div> 
+
       </div> 
     );
   }

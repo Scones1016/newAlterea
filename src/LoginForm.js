@@ -23,17 +23,12 @@ class LoginForm extends Component {
                 'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.'
             ],
             input: {},
-            errors: {},
-            forgotPassword: false,
-            isQuizAnswered: false,
-            agency: '',
-            agentName: ''
+            errors: {}
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.redirectToSignUp = this.redirectToSignUp.bind(this);
-        this.forgotPassword = this.forgotPassword.bind(this);
     }
 
     openTerms = () => {
@@ -73,7 +68,7 @@ class LoginForm extends Component {
         if(this.validate()){
             var loginFlag = false;
             console.log(this.state.input);
-            var url = "http://localhost:5000/login";
+            var url = "https://backend.defeatdis.info/login";
             var data = this.state.input; 
             const axios = require('axios');
             axios.get(url, {
@@ -81,7 +76,6 @@ class LoginForm extends Component {
             })
             .then(
                 response=> {
-                    console.log(response);
                     if(response.data.msg === "error")
                     {
                         console.log("HELLO IN ERROR");
@@ -93,45 +87,13 @@ class LoginForm extends Component {
                         }
                     }
                     else {
-                        var user = {};
-                        user["email"] = this.state.input["email"];
-                        console.log(user);
-                        var url = "http://localhost:5000/isQuizAnswered";
-                        console.log(url);
-                        const axios = require('axios');
-                        axios.get(url, {
-                            params : user
-                        })
-                        .then(
-                            response=> {
-                                console.log(response);
-                                if(response.data.quizTaken === "Taken") {
-                                    var agency = response.data.agencyName
-                                    agency = agency.toUpperCase();
-                                    var agencyArray = agency.split("").join('.');
-                                    var email = this.state.input["email"];
-                                    var input = {};
-                                    this.setState({ input: input});
-                                    /*this.props.history.push(
-                                        '/agency',
-                                        {   email: email,
-                                            agency: this.state.agency,
-                                            agentName: this.state.agentName
-
-                                        }
-                                    );*/
-                                    console.log("check if quiz answered true");
-                                }
-                                else {
-                                    this.props.history.push(
-                                        'quizIntro',
-                                        {
-                                            email: email
-                                        }
-                                    )
-                                }
-                            })
-                        .catch(e=>console.log(e))
+                        var email = this.state.input["email"];
+                        var input = {};
+                        this.setState({ input: input});
+                        this.props.history.push(
+                            '/quizIntro',
+                            { email: email}
+                          );
                     }
             })
             .catch(e=>console.log(e))
@@ -180,23 +142,9 @@ class LoginForm extends Component {
         this.props.history.push('/');
     }
 
-    forgotPassword() {
-
-    }
-
     render() {
         return (
           <div className="containerClass">
-            {this.state.forgotPassword && 
-                <div className="content text-center container-fluid mt-5">
-                    <br/>
-                    <br/>
-                    <h3 className="logInOption mt-5">We sent you an email link with your password.</h3>
-                    <br/>
-                    <h3 className="logInOption">Please Login <span>HERE</span> </h3>
-                </div>
-            }
-            {!this.state.forgotPassword && 
             <div className="content text-center container-fluid">
                 <div className="row marginTop logInTop">
                     <div className="col-md-6 text-right">
@@ -210,19 +158,17 @@ class LoginForm extends Component {
                                 <p className="errorStyle">{this.state.errors.email}</p>
                                 <input className="marginBetween text-center input" type="password" placeholder="PASSWORD" name="password" value={this.state.input.password} onChange={this.handleChange}/>
                                 <p className="errorStyle">{this.state.errors.password}</p>
-                                <p className="logInOption underLine" onClick={this.forgotPassword}>Forgot Password?</p>
                             </form>
                     </div>
                 </div>
-
 
                
 
                 <button className="signUpButton formButton signInButton" onClick={this.handleSubmit}>LOG IN</button>
 
                 <a className="marginTop copyRight" href="altereainc.com">&#169;Alterea Inc, 2020</a>
-            </div>}
-          </div> 
+            </div>
+          </div>
         );
     }
 }
