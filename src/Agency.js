@@ -12,7 +12,7 @@ class Agency extends Component {
   render() {
     return (
       <div className="agencyContainer">
-        {this.props.agency === 'U.M.B.R.A' && 
+        {this.props.agency === 'U.M.B.R.A.' && 
         <div>
         <div className="umbraCard">
           <h1 className="umbraHeading">{this.props.agency}</h1>
@@ -55,7 +55,7 @@ class Agency extends Component {
         </div>
         </div>
         }
-        {this.props.agency !== 'U.M.B.R.A' && 
+        {this.props.agency !== 'U.M.B.R.A.' && 
         <div>
 
         <div className="oracleCard">
