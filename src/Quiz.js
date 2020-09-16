@@ -26,7 +26,7 @@ class Quiz extends Component {
         super(props);
         this.state = {
             nr: 0,
-            total: QuestionData.length,
+            total: 12,
             answerJsonFile: [],
             selectedAnswer: 5,
             isAnswered: false,
@@ -98,7 +98,7 @@ class Quiz extends Component {
             selectedAnswer: 5
         });
         let { nr, total } = this.state;
-        if( nr != total) {
+        if( nr < total) {
             this.pushData(nr);
         }
         else {
@@ -107,6 +107,7 @@ class Quiz extends Component {
     }
 
     endQuiz() {
+        this.setState({ finalQuestion: true});
         var userAnswers = {};
         userAnswers["email"] = this.props.location.state.email;
         userAnswers["answer"] = this.state.answerJsonFile;
@@ -128,7 +129,6 @@ class Quiz extends Component {
                 })
             })
             .catch(e=>console.log(e))
-        this.setState({ finalQuestion: true});
         setTimeout(() => this.setState({calibratingMessage:''}), 7000);
     }
 
@@ -174,7 +174,7 @@ class Quiz extends Component {
                 );
             }
             else {
-                return <AnswerDescription answer={answers[selectedAnswer]} message={messages[selectedAnswer]} changeToNextQuestion={this.nextQuestion} counter={nr} total={total }/>
+                return <AnswerDescription answer={answers[selectedAnswer]} message={messages[selectedAnswer]} changeToNextQuestion={this.nextQuestion} counter={nr} total={total}/>
             }
         }
     }

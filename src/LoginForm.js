@@ -249,6 +249,7 @@ class LoginForm extends Component {
                                 <p className="errorStyle">{this.state.errors.email}</p>
                                 <input className="marginBetween text-center input" type="password" placeholder="PASSWORD" name="password" value={this.state.input.password} onChange={this.handleChange}/>
                                 <p className="errorStyle">{this.state.errors.password}</p>
+                                <p className="logInOption" onClick={this.forgotPassword}><u>Forgot Password?</u></p>
                             </form>
                     </div>
                 </div>
