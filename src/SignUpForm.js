@@ -95,7 +95,7 @@ class SignUpForm extends Component {
     handleSubmit() {
         if(this.validate()) {
             var data = this.state.input;
-            var url = "http://localhost:5000/signup";
+            var url = "https://backend.defeatdis.info/signup";
             var data = this.state.input; 
             const axios = require('axios');
             axios.get(url, {

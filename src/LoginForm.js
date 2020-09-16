@@ -34,6 +34,7 @@ class LoginForm extends Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.redirectToSignUp = this.redirectToSignUp.bind(this);
         this.forgotPassword = this.forgotPassword.bind(this);
+        this.redirectToLogin = this.redirectToLogin.bind(this);
     }
 
     openTerms = () => {
@@ -73,7 +74,7 @@ class LoginForm extends Component {
         if(this.validate()){
             var loginFlag = false;
             console.log(this.state.input);
-            var url = "http://localhost:5000/login";
+            var url = "https://backend.defeatdis.info/login";
             var data = this.state.input; 
             const axios = require('axios');
             axios.get(url, {
@@ -96,7 +97,7 @@ class LoginForm extends Component {
                         var user = {};
                         user["email"] = this.state.input["email"];
                         console.log(user);
-                        var url = "http://localhost:5000/isQuizAnswered";
+                        var url = "https://backend.defeatdis.info/isQuizAnswered";
                         console.log(url);
                         const axios = require('axios');
                         axios.get(url, {
@@ -112,21 +113,23 @@ class LoginForm extends Component {
                                     var email = this.state.input["email"];
                                     var input = {};
                                     this.setState({ input: input});
-                                    /*this.props.history.push(
-                                        '/agency',
+                                    console.log(agencyArray);
+                                    console.log(response.data.agentName);
+                                    this.props.history.push(
+                                        '/agencyReturn',
                                         {   email: email,
-                                            agency: this.state.agency,
-                                            agentName: this.state.agentName
+                                            agency: agencyArray+".",
+                                            agentName: response.data.agentName
 
                                         }
-                                    );*/
+                                    );
                                     console.log("check if quiz answered true");
                                 }
                                 else {
                                     this.props.history.push(
                                         'quizIntro',
                                         {
-                                            email: email
+                                            email: this.state.input["email"]
                                         }
                                     )
                                 }
@@ -181,10 +184,51 @@ class LoginForm extends Component {
     }
 
     forgotPassword() {
+        console.log("In forgot password function");
+        var email = this.state.input["email"];
+        console.log("email");
+        console.log(email);
+        if(typeof email == "undefined" || email === "") {
+            console.log("email condition");
+            var errors = {};
+            errors["email"] = "We still need your email address!";
+            this.setState({
+                errors: errors
+            });
+        }
+        else {
+            var user = {};
+            user["email"] = this.state.input["email"];
+            console.log(user);
+            var url = "https://backend.defeatdis.info/forgotPassword";
+            console.log(url);
+            const axios = require('axios');
+            axios.get(url, {
+                params : user
+            })
+            .then(
+                response=> {
+                    console.log(response);
+                    this.setState({
+                        forgotPassword: true
+                    })
+                })
+            .catch(e=>console.log(e))
+        }
+    }
 
+    redirectToLogin() {
+        var input = {};
+        var errors = {};
+        this.setState ({
+            forgotPassword: false,
+            errors: errors,
+            input: input
+        })
     }
 
     render() {
+        console.log(this.state.errors);
         return (
           <div className="containerClass">
             {this.state.forgotPassword && 
@@ -193,7 +237,7 @@ class LoginForm extends Component {
                     <br/>
                     <h3 className="logInOption mt-5">We sent you an email link with your password.</h3>
                     <br/>
-                    <h3 className="logInOption">Please Login <span>HERE</span> </h3>
+                    <h3 className="logInOption">Please Login <u><span className="clickAction" onClick={this.redirectToLogin}>HERE</span></u> </h3>
                 </div>
             }
             {!this.state.forgotPassword && 
@@ -205,7 +249,7 @@ class LoginForm extends Component {
                     <div className="col-md-6 text-left">
                             <form className="col-md-12 d-flex flex-column">
                                 <h1 className="signUpHeader">LOG IN</h1>
-                                    <h3 className="logInOption">DON'T HAVE AN ACCOUNT? SIGN UP <u><span onClick={this.redirectToSignUp}>HERE</span></u>.</h3>
+                                    <h3 className="logInOption">DON'T HAVE AN ACCOUNT? SIGN UP <u><span className="clickAction" onClick={this.redirectToSignUp}>HERE</span></u>.</h3>
                                 <input className="marginBetween text-center input" type="email" id="email" name="email" placeholder="EMAIL" value={this.state.input.email} onChange={this.handleChange}/>
                                 <p className="errorStyle">{this.state.errors.email}</p>
                                 <input className="marginBetween text-center input" type="password" placeholder="PASSWORD" name="password" value={this.state.input.password} onChange={this.handleChange}/>

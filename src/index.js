@@ -16,6 +16,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import WelcomeRecruit from './WelcomeRecruit';
 import QuizDavid from './Quiz_David';
 import Agency from './Agency';
+import WelcomeBack from './WelcomeBack';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -29,6 +30,7 @@ ReactDOM.render(
           <Route exact path="/welcome" component={WelcomeRecruit}/>
           <Route exact path="/before_you_begin" component={BeforeYouBegin}/>
           <Route exact path="/quizIntro" component={QuizIntro}/>
+          <Route exact path="/agencyReturn" component={WelcomeBack}/>
       </Switch>
     </BrowserRouter>
   </React.StrictMode>,

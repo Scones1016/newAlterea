@@ -24,6 +24,8 @@ class QuizIntro extends Component {
   }
 
   render() {
+    console.log("email in quiz intro");
+    console.log(this.props.location.state.email);
     return (
       <div className="container">
         

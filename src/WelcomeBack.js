@@ -10,19 +10,23 @@ class WelcomeBack extends Component {
   }
 
   render() {
+    console.log("Agency");
+    console.log(this.props.location.state.agency);
+    console.log("Agent Name");
+    console.log(this.props.location.state.agentName);
     return (
       <div className="agencyContainer">
-        {this.props.agency === 'U.M.B.R.A' && 
+        {this.props.location.state.agency === 'U.M.B.R.A.' && 
         <div>
         <div className="umbraCard">
-          <h1 className="umbraHeading">{this.props.agency}</h1>
+          <h1 className="umbraHeading">{this.props.location.state.agency}</h1>
           <h3 class="umbraSubHead">Unparalleled Members Beat Ruthless Arch-villains</h3>
           <p className="umbraText">
-          Assigned Recruit name: {this.props.agentName}<br></br>
+          Assigned Recruit name: {this.props.location.state.agentName}<br></br>
           Assigned agency: U.M.B.R.A.
           </p>
           <p className="umbraText">
-            Welcome back, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
+            Welcome back, <span className="highlight">Agent {this.props.location.state.agentName}</span>!<br></br><br></br>
             
            We hope you are enjoying your time on our social media training grounds and have been preparing well to face Dr. Disinfo very soon. We look forward to seeing you here on... 
 
@@ -58,20 +62,20 @@ class WelcomeBack extends Component {
         </div>
         </div>
         }
-        {this.props.agency !== 'U.M.B.R.A' && 
+        {this.props.location.state.agency !== 'U.M.B.R.A.' && 
         <div>
 
         <div className="oracleCard">
-          <h1 className="oracleHeading">{this.props.agency}</h1>
+          <h1 className="oracleHeading">{this.props.location.state.agency}</h1>
           <h3 class="oracleSubHead">Our Righteous Agents Cancel Lame Evil
           </h3>
           <p className="oracleText">
-            Assigned Recruit Name: {this.props.agentName}<br></br>
+            Assigned Recruit Name: {this.props.location.state.agentName}<br></br>
             Assigned Agency: O.R.A.C.L.E.
           </p>
 
           <p className="oracleText">
-            Glad to see you back, <span className="highlight">Agent {this.props.agentName}</span>!<br></br><br></br>
+            Glad to see you back, <span className="highlight">Agent {this.props.location.state.agentName}</span>!<br></br><br></br>
             
           Hope you’re having a good time out on the social media training grounds and have been preparing well to face Dr. Disinfo very soon. Looking forward to seeing you here on... 
 

@@ -110,7 +110,9 @@ class Quiz extends Component {
         var userAnswers = {};
         userAnswers["email"] = this.props.location.state.email;
         userAnswers["answer"] = this.state.answerJsonFile;
+        console.log(userAnswers);
         var url = "http://localhost:5000/quiz";
+        console.log(url);
         const axios = require('axios');
         axios.get(url, {
             params : userAnswers
