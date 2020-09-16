@@ -76,7 +76,7 @@ button:focus {
 
 .umbraCard .umbraText{
     font-family: Roboto Mono, monospace;
-    font-size: 20px;
+    font-size: 1.3em;
     line-height: 1.2em;
     margin-bottom: 30px;
 }
