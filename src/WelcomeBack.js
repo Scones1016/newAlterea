@@ -26,7 +26,7 @@ class WelcomeBack extends Component {
           Assigned agency: U.M.B.R.A.
           </p>
           <p className="umbraText">
-            Welcome back, <span className="highlight">Agent {this.props.location.state.agentName}</span>!<br></br><br></br>
+            Welcome back, <span className="highlight">Agent {this.props.location.state.agentName}!</span><br></br><br></br>
             
            We hope you are enjoying your time on our social media training grounds and have been preparing well to face Dr. Disinfo very soon. We look forward to seeing you here on... 
 
@@ -75,7 +75,7 @@ class WelcomeBack extends Component {
           </p>
 
           <p className="oracleText">
-            Glad to see you back, <span className="highlight">Agent {this.props.location.state.agentName}</span>!<br></br><br></br>
+            Glad to see you back, <span className="highlight">Agent {this.props.location.state.agentName}!</span><br></br><br></br>
             
           Hope you’re having a good time out on the social media training grounds and have been preparing well to face Dr. Disinfo very soon. Looking forward to seeing you here on... 
 
