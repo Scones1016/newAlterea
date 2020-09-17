@@ -47,16 +47,22 @@ class Quiz extends Component {
 
     onBackButtonEvent = (e) => {
         e.preventDefault();
-            if (!window.confirm("Are you sure you want to go back? We'll lose all your answers!")) {
-                this.isBackButtonClicked = true;
-            } 
+            if(finalQuestion) {
+                console.log("In final question back button");
+                this.props.history.push('/login');
+            }
             else {
-                window.history.pushState(null, null, window.location.pathname);
-                this.props.history.push(
-                    '/quizIntro',
-                    { email: this.state.email}
-                  );
-                this.isBackButtonClicked = false;
+                if (!window.confirm("Are you sure you want to go back? We'll lose all your answers!")) {
+                    this.isBackButtonClicked = true;
+                } 
+                else {
+                    window.history.pushState(null, null, window.location.pathname);
+                    this.props.history.push(
+                        '/quizIntro',
+                        { email: this.state.email}
+                      );
+                    this.isBackButtonClicked = false;
+                }
             }
     }
 
