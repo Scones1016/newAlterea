@@ -148,7 +148,7 @@ class Quiz extends Component {
 
     render() {
         console.log("In quiz");
-        console.log(this.props.location.state.email);
+        //console.log(this.props.location.state.email);
         let { nr, total, question, answers, messages, isAnswered, selectedAnswer, finalQuestion } = this.state;
         if(finalQuestion) {
             return (
