@@ -53,6 +53,9 @@ class Agency extends Component {
             </div>
           </div>
         </div>
+        <div className="agencyFooter">
+          <p className="copyRight">&#169;Alterea Inc, 2020</p>
+        </div>
         </div>
         }
         {this.props.agency !== 'U.M.B.R.A.' && 
@@ -95,12 +98,14 @@ class Agency extends Component {
             </WhatsappShareButton>
             </div>
           </div>
+          
+        </div>
+        <div className="agencyFooter">
+          <p className="copyRight">&#169;Alterea Inc, 2020</p>
         </div>
         </div>
         }
-         <div className="footer">
-          <p className="copyRight">&#169;Alterea Inc, 2020</p>
-        </div>
+         
       </div>
     );
   }

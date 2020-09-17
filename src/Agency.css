@@ -179,8 +179,8 @@ button:focus {
     width: 200px;
     margin-left: auto;
     margin-right: auto;
-    position: absolute;
-    bottom: 10%;
-    left: 43%;
+    position: relative;
+    margin-top: 40px;
+    padding-bottom: 20px;
     text-align: center;
 }
