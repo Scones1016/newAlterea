@@ -10,9 +10,8 @@ class Agency extends Component {
   }
 
   componentDidMount() {
-    window.history.pushState(null, null, window.location.href);
     window.addEventListener('popstate', function (event){
-        window.history.pushState(null, null,  window.location.href);
+        this.props.history.push('/login');
     });
 }
 

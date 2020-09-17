@@ -161,7 +161,7 @@ class SignUpForm extends Component {
 
         if(this.state.modalTermsCheckBox !== true || this.state.modalUserCheckBox !== true || this.state.modalPrivacyCheckBox !== true) {
             isValid = false;
-            errors["checkbox"] = "You must agree to our Terms and Conditions before being able to login to the dashboard.";
+            errors["checkbox"] = "You must agree to our Terms and Conditions, Game Rules, and Privacy Policy before being able to login to the dashboard.";
         }
 
 
@@ -181,7 +181,8 @@ class SignUpForm extends Component {
         return (
             <div className="wrapper" onClick={this.closeAllModals}>
           <div className="containerClass">
-                <div className="content text-center container-fluid">
+                <div class="mobile">We’re sorry, Dr. Disinfo has been interfering with our devices. Our website is only compatible with devices larger than 1024x768 pixels.</div>
+                <div className="remove content text-center container-fluid">
                     <div className="row marginTop topRow">
                         <div className="col-md-4 text-right titles">
                             <p className="title">Welcome,</p>
