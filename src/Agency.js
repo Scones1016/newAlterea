@@ -10,6 +10,7 @@ class Agency extends Component {
   }
 
   componentDidMount() {
+    console.log("Hello in component mount of Agency");
     window.addEventListener('popstate', function (event){
         this.props.history.push('/login');
     });
