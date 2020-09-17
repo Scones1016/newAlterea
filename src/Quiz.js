@@ -47,7 +47,7 @@ class Quiz extends Component {
 
     onBackButtonEvent = (e) => {
         e.preventDefault();
-            if(finalQuestion) {
+            if(this.state.finalQuestion) {
                 console.log("In final question back button");
                 this.props.history.push('/login');
             }
