@@ -9,6 +9,13 @@ class Agency extends Component {
     super(props);
   }
 
+  componentDidMount() {
+    window.history.pushState(null, null, window.location.href);
+    window.addEventListener('popstate', function (event){
+        window.history.pushState(null, null,  window.location.href);
+    });
+}
+
   render() {
     return (
       <div className="agencyContainer">
