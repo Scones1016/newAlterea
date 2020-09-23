@@ -183,6 +183,7 @@ class SignUpForm extends Component {
             checkboxDiv.classList.remove("col-md-6");
             var signupButton = document.getElementById("signupButton");
             signupButton.classList.remove("col-md-2");
+            signupButton.style.removeProperty("width");
         }
     }
 
