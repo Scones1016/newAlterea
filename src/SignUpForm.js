@@ -265,7 +265,7 @@ class SignUpForm extends Component {
 
                    <div className="buttons container-fluid">
                         
-                        <button className="signUpButton formButton col-md-2" id="signupButton" onClick={this.handleSubmit}>Sign Up</button>
+                        <button className="signUpButton formButton col-md-2 signUpButtonWidth" id="signupButton" onClick={this.handleSubmit}>Sign Up</button>
                         <p className="agreementErrorStyle col-md-4 text-center">{this.state.errors.checkbox}</p>
                         <a className="marginTop copyRight" target="_blank" href="https://www.altereainc.com">&#169;Alterea Inc, 2020</a>
             </div>
