@@ -177,23 +177,27 @@ class SignUpForm extends Component {
         this.props.history.push('/login');
     }
 
+    componentDidMount() {
+        if(window.innerWidth < 1200) {
+            var checkboxDiv = document.getElementById("checkboxSixColumn");
+            checkboxDiv.classList.remove("col-md-6");
+        }
+    }
+
     render() {
         return (
             <div className="wrapper" onClick={this.closeAllModals}>
           <div className="containerClass">
-                <div class="mobile">We’re sorry, Dr. Disinfo has been interfering with our devices. Our website is only compatible with devices larger than 1024x768 pixels.</div>
                 <div className="remove content text-center container-fluid">
                     <div className="row marginTop topRow">
                         <div className="col-md-4 text-right titles">
                             <p className="title">Welcome,</p>
                             <p className="title">Recruit</p>
-                            <p className="introLeft">The evil Dr. Disinfo is planning to poison Hawaiian pizza around the country. If ingested, it turns people into robo-zombie-werewolf-vampire-mummies. The only thing standing in his way is you: our new agency recruits. This is your chance to save the world.
-
- </p>
+                            <p className="introLeft">The evil Dr. Disinfo is planning to poison Hawaiian pizza around the country. If ingested, it turns people into robo-zombie-werewolf-vampire-mummies. The only thing standing in his way is you: our new agency recruits. This is your chance to save the world.</p>
                         </div>
                         <div className="col-md-4 signUpForm text-center">
 
-                                <form className="col-md-12 d-flex flex-column">
+                                <form className="col-md-12 d-flex flex-column formDiv">
                                     <h1 className="signUpHeader">CREATE AN ACCOUNT</h1>
                                     <h3 className="logInOption">ALREADY HAVE AN ACCOUNT? <u><span onClick={this.redirectToLogin}>LOG IN.</span></u></h3>
                                     <input className="marginBetween text-center input" type="text" id="username" name="username" placeholder="FULL NAME" value={this.state.input.username} onChange={this.handleChange}/>
@@ -205,16 +209,16 @@ class SignUpForm extends Component {
                                     <input className="marginBetween text-center input" type="password" placeholder="CONFIRM PASSWORD" name="confirmPassword" value={this.state.input.confirmPassword} onChange={this.handleChange} />
                                     <div className="errorStyle">{this.state.errors.confirmPassword}</div>
                                 </form>
-                        </div>
-                        <div className="col-md-4 text-left titles">
-                            <p className="rightTitle">Agents Wanted!</p>
-                            <p className="introRight">U.M.B.R.A. and O.R.A.C.L.E., two rival spy agencies led by siblings Artemis and Apollo, are temporarily joining forces to defeat the mad doctor. Sign up today to join an Agency! <br></br><br></br>
+        </div>
+                            <div className="col-md-4 text-left titles agentsMargin">
+                                <p className="rightTitle">Agents Wanted!</p>
+                                <p className="introRight">U.M.B.R.A. and O.R.A.C.L.E., two rival spy agencies led by siblings Artemis and Apollo, are temporarily joining forces to defeat the mad doctor. Sign up today to join an Agency! <br></br><br></br>
 
-                            Starting on October 4th, you will complete daily short digital missions, each following the trail of Dr. Disinfo. You will traverse social media platforms and websites, play mini games with live actors, and score points for completing missions. The strongest recruits from each day will represent their Agency in the final confrontation on October 10th with Dr. Disinfo.
+                                Starting on October 4th, you will complete daily short digital missions, each following the trail of Dr. Disinfo. You will traverse social media platforms and websites, play mini games with live actors, and score points for completing missions. The strongest recruits from each day will represent their Agency in the final confrontation on October 10th with Dr. Disinfo.
 
-                             </p>
+                                </p>
+                            </div>
                         </div>
-                    </div>
                     <br/>
                     <br/>
                     <div className="col-md-12 text-center duplicateEmailError">{this.state.errors.duplicateEmail}</div>
@@ -223,30 +227,30 @@ class SignUpForm extends Component {
                     <div className="text-center container-fluid">
                         <div className="row ">
                             <div className="col-md-3"></div>
-                            <div className="col-md-6 row">
-                                <div className="col-md-4">
+                            <div className="col-md-6 row" id="checkboxSixColumn">
+                                <div className="col-md-4 checkboxMobile">
                                     <div>
-                                        <button className="newFont link" onClick={this.openTerms}>Terms & Conditions</button>
+                                        <button className="newFont link marginDown" onClick={this.openTerms}>Terms & Conditions</button>
                                         <input className="styled-checkbox" id="styled-checkbox-1" type="checkbox" checked={this.state.modalTermsCheckBox}></input>
                                         <ModalDemo modalOption={0} checkBoxState={this.state.modalTermsCheckBox} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms} mError={this.state.modalErrors[0]} changeState={this.changeTermsState} mStatement={this.state.modalStatements[0]}/>
                                     </div>
                                 </div>
-                                <div className="col-md-1">
+                                <div className="col-md-1" className="hideArrow">
                                     <ArrowRightAltIcon/>
                                 </div>
                                 <div className="col-md-3">
                                     <div>
-                                        <button className="newFont link" onClick={this.openUser}>Game Rules</button>
+                                        <button className="newFont link marginDown" onClick={this.openUser}>Game Rules</button>
                                         <input className="styled-checkbox" id="styled-checkbox-2" type="checkbox" checked={this.state.modalUserCheckBox}></input>
                                         <ModalDemo modalOption={1} checkBoxState={this.state.modalUserCheckBox} isOpen={this.state.isUserModalOpen} mTitle={this.state.modalTitles[1]} mText={this.state.modalTexts[1]} hideDialog={this.hideUser} mError={this.state.modalErrors[1]} changeState={this.changeUsersState} mStatement={this.state.modalStatements[1]}/>
                                     </div>
                                 </div>
-                                <div className="col-md-1">
+                                <div className="col-md-1" className="hideArrow">
                                     <ArrowRightAltIcon/>
                                 </div>
                                 <div className="col-md-3">
                                     <div>
-                                        <button className="newFont link" onClick={this.openPrivacy}>Privacy Policy</button>
+                                        <button className="newFont link marginDown" onClick={this.openPrivacy}>Privacy Policy</button>
                                         <input className="styled-checkbox" id="styled-checkbox-3" type="checkbox" checked={this.state.modalPrivacyCheckBox}></input>
                                         <ModalDemo modalOption={2} checkBoxState={this.state.modalPrivacyCheckBox} isOpen={this.state.isPrivacyModalOpen} mTitle={this.state.modalTitles[2]} mText={this.state.modalTexts[2]} hideDialog={this.hidePrivacy} mError={this.state.modalErrors[2]} changeState={this.changePrivacyState} mStatement={this.state.modalStatements[2]}/>
                                     </div>
@@ -254,16 +258,16 @@ class SignUpForm extends Component {
                             </div>
                             <div className="col-md-3"></div>
                         </div>
-                    </div>
+                </div>
 
 
-                    <div className="buttons container-fluid">
+                   <div className="buttons container-fluid">
                         
                         <button className="signUpButton formButton col-md-2 " onClick={this.handleSubmit}>Sign Up</button>
                         <p className="agreementErrorStyle col-md-4 text-center">{this.state.errors.checkbox}</p>
                         <a className="marginTop copyRight" target="_blank" href="https://www.altereainc.com">&#169;Alterea Inc, 2020</a>
-                    </div>
-                </div>
+            </div>
+        </div>
             </div>
             </div>
         );
