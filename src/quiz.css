@@ -120,8 +120,6 @@ button:focus {
   border-radius: 10px;
 }
 
-
-
 .footer{
   width: 200px;
   margin-left: auto;
@@ -135,4 +133,28 @@ button:focus {
   font-family: Courier New, monospace;
   text-align: center;
   color: white;
+}
+
+@media(max-width: 1024px) {
+  .card {
+    padding: 30px;
+    margin-top: 30px;
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .proceedButton {
+    width: 70% !important;
+  }
+
+  .container {
+    display: inline-block;
+  }
+
+  .footer {
+    position: relative;
+    left: 0%;
+    bottom: 0px;
+    margin-top: 20px;
+  }
 }

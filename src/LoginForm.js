@@ -256,7 +256,7 @@ class LoginForm extends Component {
 
                
 
-                <button className="signUpButton formButton signInButton" onClick={this.handleSubmit}>LOG IN</button>
+                <button className="signUpButton formButton signInButton signUpButtonWidth" onClick={this.handleSubmit}>LOG IN</button>
 
                 <a className="marginTop copyRight" href="altereainc.com">&#169;Alterea Inc, 2020</a>
             </div>

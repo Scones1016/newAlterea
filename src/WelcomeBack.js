@@ -10,10 +10,6 @@ class WelcomeBack extends Component {
   }
 
   render() {
-    console.log("Agency");
-    console.log(this.props.location.state.agency);
-    console.log("Agent Name");
-    console.log(this.props.location.state.agentName);
     return (
       <div className="agencyContainer">
         {this.props.location.state.agency === 'U.M.B.R.A.' && 
@@ -109,10 +105,10 @@ class WelcomeBack extends Component {
               <WhatsappIcon size={32} round={true}/>
             </WhatsappShareButton>
             </div>
-          </div>
+      </div>
+      </div>
         </div>
-        </div>
-        }
+      }
          <div className="footer">
           <p className="copyRight">&#169;Alterea Inc, 2020</p>
         </div>

@@ -164,18 +164,18 @@ class Quiz extends Component {
                         <div className="card cardBeforeYouBegin">
                 <p className="quizQuestionNo">{nr}/{total}</p>
                         <p className="quizQuestion">{question}</p>
-                        { this.state.nr === 1 && <img src={quizPic1} width="500" height="300" className="mx-auto mb-5"/>}
-                        { this.state.nr === 2 && <img src={quizPic2} width="500" height="300" className="mx-auto mb-5"/>}  
-                        { this.state.nr === 3 && <img src={quizPic3} width="500" height="300" className="mx-auto mb-5"/>}  
-                        { this.state.nr === 4 && <img src={quizPic4} width="500" height="300" className="mx-auto mb-5"/>}  
-                        { this.state.nr === 5 && <img src={quizPic5} width="500" height="300" className="mx-auto mb-5"/>}  
-                        { this.state.nr === 6 && <img src={quizPic6} width="500" height="300" className="mx-auto mb-5"/>}  
-                        { this.state.nr === 7 && <img src={quizPic7} width="500" height="300" className="mx-auto mb-5"/>}  
-                        { this.state.nr === 8 && <img src={quizPic8} width="500" height="300" className="mx-auto mb-5"/>} 
-                        { this.state.nr === 9 && <img src={quizPic8} width="500" height="300" className="mx-auto mb-5"/>} 
-                        { this.state.nr === 10 && <img src={quizPic6} width="500" height="300" className="mx-auto mb-5"/>} 
-                        { this.state.nr === 11 && <img src={quizPic9} width="500" height="300" className="mx-auto mb-5"/>} 
-                        { this.state.nr === 12 && <img src={quizPic10} width="500" height="300" className="mx-auto mb-5"/>}         
+                        { this.state.nr === 1 && <img src={quizPic1} width="500" height="300" className="mx-auto mb-5 quizImages"/>}
+                        { this.state.nr === 2 && <img src={quizPic2} width="500" height="300" className="mx-auto mb-5 quizImages"/>}  
+                        { this.state.nr === 3 && <img src={quizPic3} width="500" height="300" className="mx-auto mb-5 quizImages"/>}  
+                        { this.state.nr === 4 && <img src={quizPic4} width="500" height="300" className="mx-auto mb-5 quizImages"/>}  
+                        { this.state.nr === 5 && <img src={quizPic5} width="500" height="300" className="mx-auto mb-5 quizImages"/>}  
+                        { this.state.nr === 6 && <img src={quizPic6} width="500" height="300" className="mx-auto mb-5 quizImages"/>}  
+                        { this.state.nr === 7 && <img src={quizPic7} width="500" height="300" className="mx-auto mb-5 quizImages"/>}  
+                        { this.state.nr === 8 && <img src={quizPic8} width="500" height="300" className="mx-auto mb-5 quizImages"/>} 
+                        { this.state.nr === 9 && <img src={quizPic8} width="500" height="300" className="mx-auto mb-5 quizImages"/>} 
+                        { this.state.nr === 10 && <img src={quizPic6} width="500" height="300" className="mx-auto mb-5 quizImages"/>} 
+                        { this.state.nr === 11 && <img src={quizPic9} width="500" height="300" className="mx-auto mb-5 quizImages"/>} 
+                        { this.state.nr === 12 && <img src={quizPic10} width="500" height="300" className="mx-auto mb-5 quizImages"/>}         
                         <Answers answers={answers} messages={messages} isAnswered={this.questionAnswered} selectedAnswer={this.state.selectedAnswer} storeAnswer={this.createAnswerJsonFile} disappearQuestion={this.disappearQuestion}/>
                         </div>
                     </div>

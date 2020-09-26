@@ -184,3 +184,61 @@ button:focus {
     padding-bottom: 20px;
     text-align: center;
 }
+
+@media(max-width: 1024px) {
+    .oracleCard {
+        width: 85%;
+        height: auto;
+        text-align: center;
+        padding: 2px;
+    }
+
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    .oracleHeading {
+        padding-top: 25px;
+        font-size: 2.5em !important;
+    }
+
+    .umbraHeading {
+        padding-top: 25px;
+        font-size: 2.5em !important;
+    }
+
+    .oracleSubHead {
+        font-size: 1.5em;
+    }
+
+    .umbraSubHead {
+        font-size: 1.5em;
+    }
+
+    .oracleText {
+        font-size: 1.2em !important;
+    }
+
+    .umbraText {
+        font-size: 1.2em !important;
+    }
+
+    .copyRight {
+        font-size: 15px;
+        padding-bottom: 20px !important;
+    }
+
+    .agencyContainer 
+    {
+        display: block;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .umbraCard {
+        width: 90%;
+        padding: 10px;
+        background-image: none;
+    }
+}
