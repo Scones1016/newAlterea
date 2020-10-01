@@ -27,7 +27,7 @@ class WelcomeBack extends Component {
            We hope you are enjoying your time on our social media training grounds and have been preparing well to face Dr. Disinfo very soon. We look forward to seeing you here on... 
 
 
-             <span class="date">October 4th at 9am PST</span>
+             <span class="date">October 11th at 9am PST</span>
 
               <br/>
               Warmest Regards, 
@@ -77,7 +77,7 @@ class WelcomeBack extends Component {
 
             <br/><br/>
 
-            <span class="date">October 4th at 9am PST</span>
+            <span class="date">October 11th at 9am PST</span>
 
 
               <br/>
