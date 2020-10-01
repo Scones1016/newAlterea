@@ -11,13 +11,14 @@ import SignUpConfirmation from "./SignUpConfirmation";
 import LoginForm from "./LoginForm";
 import { withRouter } from "react-router-dom";
 import MetaTags from "react-meta-tags";
-import './Changes.css';
+import "./Changes.css";
 
 class Welcome extends Component {
   constructor() {
     super(...arguments);
     this.redirectToSignUp = this.redirectToSignUp.bind(this);
     this.redirectToLogin = this.redirectToLogin.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   redirectToSignUp() {
@@ -26,6 +27,31 @@ class Welcome extends Component {
 
   redirectToLogin() {
     this.props.history.push("/login");
+  }
+
+  handleSubmit() {
+    if (this.validate()) {
+      var data = this.state.input;
+      var url = "https://backend.defeatdis.info/signup";
+      var data = this.state.input;
+      const axios = require("axios");
+      axios
+        .get(url, {
+          params: data,
+        })
+        .then((response) => {
+          if (response.data.msg === "error") {
+            var errors = {};
+            errors.confirmPassword = "Email Already In Use";
+            this.setState({ errors: errors });
+          } else {
+            this.props.history.push("terms", {
+              email: this.state.input["email"],
+            });
+          }
+        })
+        .catch((e) => console.log(e));
+    }
   }
 
   render() {
@@ -47,12 +73,15 @@ class Welcome extends Component {
                 </p>
               </div>
               <div className="btn btn-block btn-lg">
-                <button className="col-xs-4" onClick={this.handleSubmit}>
-                  About this event
-                </button>
-                <button id="signupButton" onClick={this.redirectToSignUp}>
+                <button className="col-xs-4">About this event</button>
+                <button
+                  //className="signUpButton formButton col-md-2 signUpButtonWidth"
+                  id="signupButton"
+                  onClick={this.redirectToSignUp}
+                >
                   Sign Up
                 </button>
+
                 <p className="accountSignUp">
                   ALREADY HAVE AN ACCOUNT?{" "}
                   <u>
