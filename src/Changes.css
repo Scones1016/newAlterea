@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 
 .App {
   text-align: center;
 }
-
 
 .App-logo {
   height: 40vmin;
@@ -33,7 +32,7 @@
   color: #61dafb;
 }
 
-.link{
+.link {
   cursor: pointer;
 }
 
@@ -47,7 +46,11 @@
 }
 
 .containerClass {
-  background-image: linear-gradient(rgba(55, 55, 55, 0.5), rgba(55, 55, 55, 0.8)), url('./images/background.jpeg');
+  background-image: linear-gradient(
+      rgba(55, 55, 55, 0.5),
+      rgba(55, 55, 55, 0.8)
+    ),
+    url("./images/background.jpeg");
   background-size: cover;
   background-repeat: repeat;
   min-width: 100%;
@@ -64,19 +67,19 @@
   position: absolute;
 }
 
-.introLeft{
+.introLeft {
   font-family: Courier Prime, sans-serif;
   font-size: 1em;
-  line-height:1.5em ;
+  line-height: 1.5em;
   text-align: right;
   width: 90%;
   max-width: 500px;
   float: right;
 }
-.introRight{
+.introRight {
   font-family: Courier Prime, sans-serif;
   font-size: 1em;
-  line-height:1.5em ;
+  line-height: 1.5em;
   text-align: left;
   width: 90%;
   max-width: 500px;
@@ -86,14 +89,17 @@
 .marginTop {
   margin-top: 5%;
 }
-.topRow{
+.marginBottom {
+  margin-bottom: 10%;
+}
+.topRow {
   margin-top: 15vh;
 }
-.logInTop{
+.logInTop {
   margin-top: 25vh;
 }
 
-.titles{
+.titles {
   margin-top: 15px;
 }
 .title {
@@ -101,16 +107,16 @@
   text-transform: uppercase;
   line-height: 1em;
   font-size: 50pt;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: "Montserrat Subrayada", sans-serif;
 }
 .rightTitle {
   color: white;
   text-transform: uppercase;
   line-height: 1em;
   font-size: 30pt;
-  font-family: 'Montserrat Subrayada', sans-serif;
+  font-family: "Montserrat Subrayada", sans-serif;
 }
-.titleSignIn{
+.titleSignIn {
   margin-top: 15px;
   font-size: 50pt;
 }
@@ -119,39 +125,47 @@
   color: white;
   margin-top: 2% !important;
   font-size: 50pt;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
 }
 
 .copyRight {
   display: block;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   font-weight: 300;
   font-size: 18px;
   text-transform: capitalize;
 }
 
-.buttons{
-  margin-top: 40px;
+.buttons {
+  margin-top: 30px;
+}
+
+.buttonsinline {
+  left: 45%;
+}
+.accountSignUp {
+  color: white;
+  margin-left: 10rem;
+  font-size: 0.8rem;
 }
 .signUpButton {
   color: black;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: white;
   text-transform: uppercase;
-  padding : 15px;
+  padding: 15px;
   width: 15%;
   border: none;
   font-size: 20pt;
 }
-.signInButton{
+.signInButton {
   margin-top: 50px;
 }
 
-
-.signUpForm .signUpHeader{
-  font-family:'Montserrat', sans-serif;
+.signUpForm .signUpHeader {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.8em;
   margin-top: 20px;
   width: 350px;
@@ -159,22 +173,27 @@
   margin-right: auto;
 }
 
-.logInForm .signUpHeader{
-  font-family:'Montserrat', sans-serif;
+.logInForm .signUpHeader {
+  font-family: "Montserrat", sans-serif;
   font-size: 1.8em;
   margin-top: 20px;
   width: 350px;
 }
-
-.logInOption{
-  font-family:'Montserrat', sans-serif;
+.account {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  position: absolute;
+  display: block;
+}
+.logInOption {
+  font-family: "Montserrat", sans-serif;
   font-size: 1em;
 }
 
 .signUpForm .marginBetween {
   margin-top: 2%;
   color: black;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   margin-left: auto;
   margin-right: auto;
@@ -183,12 +202,12 @@
 .logInForm .marginBetween {
   margin-top: 2%;
   color: black;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   float: left;
 }
 
-.logInForm .signUpHeader{
+.logInForm .signUpHeader {
   margin-left: 0 px;
   margin-right: 0 px;
 }
@@ -203,7 +222,7 @@
   padding: 0;
 }
 .styled-checkbox + label:before {
-  content: '';
+  content: "";
   margin-right: 10px;
   display: inline-block;
   vertical-align: text-top;
@@ -227,14 +246,15 @@
   background: #ddd;
 }
 .styled-checkbox:checked + label:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 5px;
   top: 9px;
   background: black;
   width: 2px;
   height: 2px;
-  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white, 4px -6px 0 white, 4px -8px 0 white;
+  box-shadow: 2px 0 0 white, 4px 0 0 white, 4px -2px 0 white, 4px -4px 0 white,
+    4px -6px 0 white, 4px -8px 0 white;
   transform: rotate(45deg);
 }
 
@@ -244,29 +264,20 @@
   padding-bottom: 10px;
 }
 
-.input{
+.input {
   height: 30px;
   width: 320px;
   font-family: Courier New, sans-serif;
 }
 
-input[type="text"]
-{
+input[type="text"] {
   font-family: Courier New, sans-serif;
 }
 
 .bgModal {
   background-color: #adadad;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
-  width: 80%;
-  height: 80vh;
-  overflow-y: scroll;
-  margin-top: 3%;
-}
-
-.continueButton {
-  font-size: 15pt;
 }
 
 .modalWidth {
@@ -284,26 +295,26 @@ input[type="text"]
 
 .errorStyle {
   margin-left: 12%;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   color: white;
 }
 
 .duplicateEmailError {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   color: white;
   font-size: 20px;
 }
 
 .modalErrorStyle {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   color: white;
 }
 
 .agreementErrorStyle {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   color: white;
   margin-left: auto;
@@ -322,49 +333,49 @@ a:hover {
 }
 
 .quizSelectedColor {
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
   color: white;
   font-size: 20px;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   /*font-weight: bolder;*/
 }
 
 .quizSelectedColor:hover {
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
   cursor: pointer;
   /*font-weight: bolder;*/
 }
 
 .quizDefaultColor:hover {
   color: white;
-  background-color: #1C1C1C;
+  background-color: #1c1c1c;
   cursor: pointer;
   /*font-weight: bolder;*/
 }
 
 .quizDefaultColor {
-  color: #1C1C1C;
+  color: #1c1c1c;
   font-size: 20px;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
 }
 
 .newFont {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 0.9em;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
 }
-.link{
+.link {
   padding: 5px 10px;
   border: none;
 }
-.link:hover{
+.link:hover {
   text-decoration: underline;
 }
 
 .confirmation {
   text-transform: capitalize;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 25px;
 }
 
@@ -372,14 +383,14 @@ a:hover {
   margin-top: 20%;
 }
 
-/*.modalText {
-  height : 600px;
+.modalText {
+  height: 600px;
   overflow-y: scroll;
-}*/
+}
 
 .loginLink {
   color: white;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   font-size: 20px;
   text-transform: capitalize;
@@ -392,30 +403,26 @@ a:hover {
 
 .quizChosenAnswer {
   font-size: 20px;
-  color: #1C1C1C;
-  font-family: 'Roboto Mono', sans-serif;
+  color: #1c1c1c;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
 }
 
 .quizDescription {
   font-size: 20px;
-  color: #1C1C1C;
+  color: #1c1c1c;
   font-weight: bold;
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   font-weight: 300;
   padding: 30px;
 }
 
-.missionButton:hover{
+.missionButton:hover {
   color: white;
   background-color: black;
 }
 
-.termsModal {
-  margin-left: 30% !important;
-}
-
-.missionButton{
+.missionButton {
   font-family: Courier New, monospace;
   font-size: 1.3em;
   display: block;
@@ -427,7 +434,7 @@ a:hover {
   border-radius: 0px;
 }
 
-.agencyContainer{
+.agencyContainer {
   background-size: cover;
   background-repeat: repeat;
   min-width: 100%;
@@ -436,10 +443,10 @@ a:hover {
   background-color: #252525;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
 }
 
-.footer{
+.footer {
   width: 200px;
   margin-left: auto;
   margin-right: auto;
@@ -450,7 +457,7 @@ a:hover {
 }
 
 .quizQuestionNo {
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: "Roboto Mono", sans-serif;
   text-align: center;
   font-size: 20px;
   font-weight: 500;
@@ -474,87 +481,129 @@ a:hover {
   cursor: pointer;
 }
 
-.mobile{
+.mobile {
   display: none;
 }
 
-span.cls_004{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: underline}
-div.cls_004{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
-span.cls_003{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-div.cls_003{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:normal;font-style:normal;text-decoration: none}
-span.cls_002{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
-div.cls_002{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weight:bold;font-style:normal;text-decoration: none}
+span.cls_004 {
+  font-family: Arial, serif;
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: underline;
+}
+div.cls_004 {
+  font-family: Arial, serif;
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+}
+span.cls_003 {
+  font-family: Arial, serif;
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+div.cls_003 {
+  font-family: Arial, serif;
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+}
+span.cls_002 {
+  font-family: Arial, serif;
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+}
+div.cls_002 {
+  font-family: Arial, serif;
+  font-size: 11px;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-style: normal;
+  text-decoration: none;
+}
 
 @keyframes blink {
-    /**
+  /**
      * At the start of the animation the dot
      * has an opacity of .2
      */
-    0% {
-      opacity: .2;
-    }
-    /**
+  0% {
+    opacity: 0.2;
+  }
+  /**
      * At 20% the dot is fully visible and
      * then fades out slowly
      */
-    20% {
-      opacity: 1;
-    }
-    /**
+  20% {
+    opacity: 1;
+  }
+  /**
      * Until it reaches an opacity of .2 and
      * the animation can start again
      */
-    100% {
-      opacity: .2;
-    }
+  100% {
+    opacity: 0.2;
+  }
 }
 
-.saving{
+.saving {
   margin-top: 10px;
   font-size: 2em;
 }
 .saving span {
-    /**
+  /**
      * Use the blink animation, which is defined above
      */
-    animation-name: blink;
-    /**
+  animation-name: blink;
+  /**
      * The animation should take 1.4 seconds
      */
-    animation-duration: 1.4s;
-    /**
+  animation-duration: 1.4s;
+  /**
      * It will repeat itself forever
      */
-    animation-iteration-count: infinite;
-    /**
+  animation-iteration-count: infinite;
+  /**
      * This makes sure that the starting style (opacity: .2)
      * of the animation is applied before the animation starts.
      * Otherwise we would see a short flash or would have
      * to set the default styling of the dots to the same
      * as the animation. Same applies for the ending styles.
      */
-    animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .saving span:nth-child(2) {
-    /**
+  /**
      * Starts the animation of the third dot
      * with a delay of .2s, otherwise all dots
      * would animate at the same time
      */
-    animation-delay: .2s;
+  animation-delay: 0.2s;
 }
 
 .saving span:nth-child(3) {
-    /**
+  /**
      * Starts the animation of the third dot
      * with a delay of .4s, otherwise all dots
      * would animate at the same time
      */
-    animation-delay: .4s;
+  animation-delay: 0.4s;
 }
 
-@media(max-width: 1024px){
+@media (max-width: 1024px) {
   .title {
     font-size: 35px;
   }
@@ -600,6 +649,24 @@ div.cls_002{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weigh
   .agentsMargin {
     margin-top: 100px;
   }
+  .vol-ctr {
+    display: flex;
+    justify-content: space-around;
+  }
+  .agentsMargin1 {
+    /*margin-top: 200px;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;*/
+
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .hideArrow {
     display: none;
@@ -623,7 +690,7 @@ div.cls_002{font-family:Arial,serif;font-size:11.0px;color:rgb(0,0,0);font-weigh
     width: 90%;
   }
 
-  .logInTop{
+  .logInTop {
     margin-top: 10vh;
   }
 

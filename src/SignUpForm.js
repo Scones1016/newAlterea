@@ -16,30 +16,8 @@ class SignUpForm extends Component {
     constructor() {
         super(...arguments);
         this.state = { 
-            isTermsModalOpen: false ,
-            isUserModalOpen: false,
-            isPrivacyModalOpen: false,
-            modalTitles : [ 'Terms & Conditions', 'Game Rules', 'Privacy Policy'],
-            modalTexts : [
-                'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.',
-                'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.',
-                'Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.Lorem ipsum is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It\'s also called placeholder (or filler) text. It\'s a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have been changed by addition or removal, so to deliberately render its content nonsensical; it\'s not genuine, correct, or comprehensible Latin anymore. While lorem ipsum\'s still resembles classical Latin, it actually has no meaning whatsoever. As Cicero\'s text doesn\'t contain the letters K, W, or Z, alien to latin, these, and others are often inserted randomly to mimic the typographic appearence of European languages, as are digraphs not to be found in the original.'
-            ],
-            modalErrors : [
-                'Please agree to the terms and conditions.',
-                'Please aceept the game rules.',
-                'Please accept the privacy policy.'
-            ],
-            modalStatements : [
-                'I accept the terms and conditions',
-                'I accept the game rules.',
-                'I have read through the privacy policy'
-            ],
             input: {},
             errors: {},
-            modalTermsCheckBox: false,
-            modalUserCheckBox: false,
-            modalPrivacyCheckBox: false
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -109,7 +87,7 @@ class SignUpForm extends Component {
                 }
                 else {
                     this.props.history.push(
-                        'quizIntro',
+                        'terms',
                         {
                             email: this.state.input["email"]
                         }
@@ -159,12 +137,6 @@ class SignUpForm extends Component {
             }
         }
 
-        if(this.state.modalTermsCheckBox !== true || this.state.modalUserCheckBox !== true || this.state.modalPrivacyCheckBox !== true) {
-            isValid = false;
-            errors["checkbox"] = "You must agree to our Terms and Conditions, Game Rules, and Privacy Policy before being able to login to the dashboard.";
-        }
-
-
         this.setState({
             errors: errors
         })
@@ -193,11 +165,7 @@ class SignUpForm extends Component {
           <div className="containerClass">
                 <div className="remove content text-center container-fluid">
                     <div className="row marginTop topRow">
-                        <div className="col-md-4 text-right titles">
-                            <p className="title">Welcome,</p>
-                            <p className="title">Recruit</p>
-                            <p className="introLeft">The evil Dr. Disinfo is planning to poison Hawaiian pizza around the country. If ingested, it turns people into robo-zombie-werewolf-vampire-mummies. The only thing standing in his way is you: our new agency recruits. This is your chance to save the world.</p>
-                        </div>
+                        <div className="col-md-4"></div>
                         <div className="col-md-4 signUpForm text-center">
 
                                 <form className="col-md-12 d-flex flex-column formDiv">
@@ -212,57 +180,12 @@ class SignUpForm extends Component {
                                     <input className="marginBetween text-center input" type="password" placeholder="CONFIRM PASSWORD" name="confirmPassword" value={this.state.input.confirmPassword} onChange={this.handleChange} />
                                     <div className="errorStyle">{this.state.errors.confirmPassword}</div>
                                 </form>
-        </div>
-                            <div className="col-md-4 text-left titles agentsMargin">
-                                <p className="rightTitle">Agents Wanted!</p>
-                                <p className="introRight">U.M.B.R.A. and O.R.A.C.L.E., two rival spy agencies led by siblings Artemis and Apollo, are temporarily joining forces to defeat the mad doctor. Sign up today to join an Agency! <br></br><br></br>
-
-                                Starting on October 4th, you will complete daily short digital missions, each following the trail of Dr. Disinfo. You will traverse social media platforms and websites, play mini games with live actors, and score points for completing missions. The strongest recruits from each day will represent their Agency in the final confrontation on October 10th with Dr. Disinfo.
-
-                                </p>
-                            </div>
+                        </div>
+                        <div className="col-md-4"></div>
                         </div>
                     <br/>
                     <br/>
                     <div className="col-md-12 text-center duplicateEmailError">{this.state.errors.duplicateEmail}</div>
-
-
-                    <div className="text-center container-fluid">
-                        <div className="row ">
-                            <div className="col-md-3"></div>
-                            <div className="col-md-6 row" id="checkboxSixColumn">
-                                <div className="col-md-4 checkboxMobile">
-                                    <div>
-                                        <button className="newFont link marginDown" onClick={this.openTerms}>Terms & Conditions</button>
-                                        <input className="styled-checkbox" id="styled-checkbox-1" type="checkbox" checked={this.state.modalTermsCheckBox}></input>
-                                        <ModalDemo modalOption={0} checkBoxState={this.state.modalTermsCheckBox} isOpen={this.state.isTermsModalOpen} mTitle={this.state.modalTitles[0]} mText={this.state.modalTexts[0]} hideDialog={this.hideTerms} mError={this.state.modalErrors[0]} changeState={this.changeTermsState} mStatement={this.state.modalStatements[0]}/>
-                                    </div>
-                                </div>
-                                <div className="col-md-1" className="hideArrow">
-                                    <ArrowRightAltIcon/>
-                                </div>
-                                <div className="col-md-3">
-                                    <div>
-                                        <button className="newFont link marginDown" onClick={this.openUser}>Game Rules</button>
-                                        <input className="styled-checkbox" id="styled-checkbox-2" type="checkbox" checked={this.state.modalUserCheckBox}></input>
-                                        <ModalDemo modalOption={1} checkBoxState={this.state.modalUserCheckBox} isOpen={this.state.isUserModalOpen} mTitle={this.state.modalTitles[1]} mText={this.state.modalTexts[1]} hideDialog={this.hideUser} mError={this.state.modalErrors[1]} changeState={this.changeUsersState} mStatement={this.state.modalStatements[1]}/>
-                                    </div>
-                                </div>
-                                <div className="col-md-1" className="hideArrow">
-                                    <ArrowRightAltIcon/>
-                                </div>
-                                <div className="col-md-3">
-                                    <div>
-                                        <button className="newFont link marginDown" onClick={this.openPrivacy}>Privacy Policy</button>
-                                        <input className="styled-checkbox" id="styled-checkbox-3" type="checkbox" checked={this.state.modalPrivacyCheckBox}></input>
-                                        <ModalDemo modalOption={2} checkBoxState={this.state.modalPrivacyCheckBox} isOpen={this.state.isPrivacyModalOpen} mTitle={this.state.modalTitles[2]} mText={this.state.modalTexts[2]} hideDialog={this.hidePrivacy} mError={this.state.modalErrors[2]} changeState={this.changePrivacyState} mStatement={this.state.modalStatements[2]}/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="col-md-3"></div>
-                        </div>
-                </div>
-
 
                    <div className="buttons container-fluid">
                         
