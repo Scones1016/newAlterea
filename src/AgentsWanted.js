@@ -9,12 +9,9 @@ class AgentsWanted extends Component {
   }
 
   handleSubmit() {
-      this.props.history.push(
-        'quizIntro',
-        {
-            email: this.props.location.state.email
-        }
-    )
+    this.props.history.push("quizIntro", {
+      email: this.props.location.state.email,
+    });
   }
 
   render() {
@@ -28,8 +25,7 @@ class AgentsWanted extends Component {
               <p className="mx-auto">
                 U.M.B.R.A. and O.R.A.C.L.E., two rival spy agencies led by
                 siblings Artemis and Apollo, are temporarily joining forces to
-                defeat the mad doctor. Sign up today to join an Agency!{" "}
-                <br></br>
+                defeat the mad doctor. today to join an Agency! <br></br>
                 <br></br>
                 Starting on October 4th, you will complete daily short digital
                 missions, each following the trail of Dr. Disinfo. You will
@@ -38,7 +34,12 @@ class AgentsWanted extends Component {
                 strongest recruits from each day will represent their Agency in
                 the final confrontation on October 10th with Dr. Disinfo.
               </p>
-              <button className="signUpButton formButton signInButton signUpButtonWidth" onClick={this.handleSubmit}>CONTINUE</button>
+              <button
+                className="signUpButton formButton signInButton signUpButtonWidth"
+                onClick={this.handleSubmit}
+              >
+                CONTINUE
+              </button>
               <a
                 className=" copyRight mt-5"
                 target="_blank"
