@@ -1,7 +1,7 @@
-import React from "react";
-import { Component } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import { withRouter } from 'react-router-dom';
 class AgentsWanted extends Component {
   constructor(props) {
     super(props);
