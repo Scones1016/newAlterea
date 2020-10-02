@@ -92,7 +92,11 @@
 .logInTop{
   margin-top: 25vh;
 }
-
+.accountSignUp {
+  color: white;
+  margin-left: 10rem;
+  font-size: 0.8rem;
+}
 .titles{
   margin-top: 15px;
 }
