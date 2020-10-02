@@ -19,7 +19,6 @@ class SignUpForm extends Component {
             input: {},
             errors: {},
         };
-
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
         this.redirectToLogin = this.redirectToLogin.bind(this);
@@ -190,6 +189,7 @@ class SignUpForm extends Component {
                    <div className="buttons container-fluid">
                         
                         <button className="signUpButton formButton col-md-2 signUpButtonWidth" id="signupButton" onClick={this.handleSubmit}>Sign Up</button>
+                        <a className="marginAboutUs copyRight" target="_blank" href="https://www.altereainc.com"><button className="signUpButton formButton col-md-2 signUpButtonWidth" id="signupButton" onClick={this.handleAbout}>About Us</button></a>
                         <p className="agreementErrorStyle col-md-4 text-center">{this.state.errors.checkbox}</p>
                         <a className="marginTop copyRight" target="_blank" href="https://www.altereainc.com">&#169;Alterea Inc, 2020</a>
             </div>

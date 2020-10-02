@@ -18,6 +18,7 @@ class Welcome extends Component {
     super(...arguments);
     this.redirectToSignUp = this.redirectToSignUp.bind(this);
     this.redirectToLogin = this.redirectToLogin.bind(this);
+    this.handleAgentsWanted = this.handleAgentsWanted.bind(this);
   }
 
   redirectToSignUp() {
@@ -26,6 +27,10 @@ class Welcome extends Component {
 
   redirectToLogin() {
     this.props.history.push("/login");
+  }
+
+  handleAgentsWanted() {
+    this.props.history.push("/agentsWanted");
   }
 
   render() {
@@ -47,7 +52,7 @@ class Welcome extends Component {
                 </p>
               </div>
               <div className="btn btn-block btn-lg">
-                <button className="col-xs-4" onClick={this.handleSubmit}>
+                <button className="col-xs-4" onClick={this.handleAgentsWanted}>
                   About this event
                 </button>
                 <button id="signupButton" onClick={this.redirectToSignUp}>

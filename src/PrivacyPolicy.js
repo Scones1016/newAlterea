@@ -25,7 +25,7 @@ class PrivacyPolicy extends Component {
         }
         else {
             this.props.history.push(
-                'agentswanted',
+                'quizIntro',
                 {
                     email: this.props.location.state.email
                 }

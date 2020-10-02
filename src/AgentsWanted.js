@@ -10,10 +10,7 @@ class AgentsWanted extends Component {
 
   handleSubmit() {
       this.props.history.push(
-        'quizIntro',
-        {
-            email: this.props.location.state.email
-        }
+        '/',
     )
   }
 
@@ -38,7 +35,7 @@ class AgentsWanted extends Component {
                 strongest recruits from each day will represent their Agency in
                 the final confrontation on October 10th with Dr. Disinfo.
               </p>
-              <button className="signUpButton formButton signInButton signUpButtonWidth" onClick={this.handleSubmit}>CONTINUE</button>
+              <button className="signUpButton formButton signInButton signUpButtonWidth" onClick={this.handleSubmit}>BACK</button>
               <a
                 className=" copyRight mt-5"
                 target="_blank"
