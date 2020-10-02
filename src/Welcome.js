@@ -55,13 +55,13 @@ class Welcome extends Component {
               <div className="btn btn-block btn-lg">
 
                 <button
-                  className="btn btn-light"
+                  className="btn btn-light mr-3"
                   id="signupButton"
                   onClick={this.handleAgentsWanted}
                 >
                   About this event
                 </button>
-                <button id="signupButton" onClick={this.redirectToSignUp}>
+                <button id="signupButton" className="btn btn-light" onClick={this.redirectToSignUp}>
                   Sign Up
                 </button>
 
