@@ -11,7 +11,7 @@ import SignUpConfirmation from "./SignUpConfirmation";
 import LoginForm from "./LoginForm";
 import { withRouter } from "react-router-dom";
 import MetaTags from "react-meta-tags";
-import './Changes.css';
+import "./Changes.css";
 
 class Welcome extends Component {
   constructor() {
@@ -58,6 +58,7 @@ class Welcome extends Component {
                 <button id="signupButton" onClick={this.redirectToSignUp}>
                   Sign Up
                 </button>
+
                 <p className="accountSignUp">
                   ALREADY HAVE AN ACCOUNT?{" "}
                   <u>

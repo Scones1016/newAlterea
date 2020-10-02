@@ -1,7 +1,7 @@
-import React from "react";
-import { Component } from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import { withRouter } from "react-router-dom";
+import React from 'react';
+import { Component } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
+import { withRouter } from 'react-router-dom';
 class AgentsWanted extends Component {
   constructor(props) {
     super(props);
@@ -25,8 +25,7 @@ class AgentsWanted extends Component {
               <p className="mx-auto">
                 U.M.B.R.A. and O.R.A.C.L.E., two rival spy agencies led by
                 siblings Artemis and Apollo, are temporarily joining forces to
-                defeat the mad doctor. Sign up today to join an Agency!{" "}
-                <br></br>
+                defeat the mad doctor. today to join an Agency! <br></br>
                 <br></br>
                 Starting on October 4th, you will complete daily short digital
                 missions, each following the trail of Dr. Disinfo. You will
