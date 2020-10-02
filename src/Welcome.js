@@ -72,10 +72,12 @@ class Welcome extends Component {
                   chance to save the world.
                 </p>
               </div>
+
               <div className="btn btn-block btn-lg">
-                <button className="col-xs-4">About this event</button>
+                <button className="btn btn-light mr-4">About this event</button>
+
                 <button
-                  //className="signUpButton formButton col-md-2 signUpButtonWidth"
+                  className="btn btn-light"
                   id="signupButton"
                   onClick={this.redirectToSignUp}
                 >
