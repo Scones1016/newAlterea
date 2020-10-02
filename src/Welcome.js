@@ -18,7 +18,7 @@ class Welcome extends Component {
     super(...arguments);
     this.redirectToSignUp = this.redirectToSignUp.bind(this);
     this.redirectToLogin = this.redirectToLogin.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleAgentsWanted = this.handleAgentsWanted.bind(this);
   }
 
   redirectToSignUp() {
@@ -29,29 +29,8 @@ class Welcome extends Component {
     this.props.history.push("/login");
   }
 
-  handleSubmit() {
-    if (this.validate()) {
-      var data = this.state.input;
-      var url = "https://backend.defeatdis.info/signup";
-      var data = this.state.input;
-      const axios = require("axios");
-      axios
-        .get(url, {
-          params: data,
-        })
-        .then((response) => {
-          if (response.data.msg === "error") {
-            var errors = {};
-            errors.confirmPassword = "Email Already In Use";
-            this.setState({ errors: errors });
-          } else {
-            this.props.history.push("terms", {
-              email: this.state.input["email"],
-            });
-          }
-        })
-        .catch((e) => console.log(e));
-    }
+  handleAgentsWanted() {
+    this.props.history.push("/agentsWanted");
   }
 
   render() {
@@ -74,13 +53,15 @@ class Welcome extends Component {
               </div>
 
               <div className="btn btn-block btn-lg">
-                <button className="btn btn-light mr-4">About this event</button>
 
                 <button
                   className="btn btn-light"
                   id="signupButton"
-                  onClick={this.redirectToSignUp}
+                  onClick={this.handleAgentsWanted}
                 >
+                  About this event
+                </button>
+                <button id="signupButton" onClick={this.redirectToSignUp}>
                   Sign Up
                 </button>
 
