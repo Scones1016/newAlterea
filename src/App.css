@@ -287,6 +287,7 @@ input[type="text"] {
   height: 80vh;
   overflow-y: scroll;
   margin-top: 3%;
+  padding: 30px !important;
 }
 
 .continueButton {
@@ -621,6 +622,19 @@ div.cls_002 {
 }
 
 @media (max-width: 1024px) {
+  .mobileModal {
+    width: 90% !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px !important;
+    margin-top: 30px !important;
+  }
+
+  .termsModal {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   .title {
     font-size: 35px;
   }
@@ -719,4 +733,13 @@ div.cls_002 {
 
 .marginAboutUs {
   margin-top: 30px;
+}
+
+.agentsText {
+  font-size: 20px !important;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.aboutCreators {
+  width: 20% !important;
 }

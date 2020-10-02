@@ -29,9 +29,6 @@ class QuizIntro extends Component {
             <button onClick={this.redirectToQuiz} class="proceedButton">PROCEED</button>
 
         </div>
-        <div className="footer">
-          <p className="copyRight">&#169;Alterea Inc, 2020</p>
-        </div> 
 
       </div> 
     );

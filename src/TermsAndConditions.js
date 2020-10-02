@@ -39,7 +39,7 @@ class TermsAndConditions extends Component {
             <div className="containerClass container-fluid">
                 <div className="row">
             <div className="col-md-2"></div>
-            <div className="bgModal pl-5 pr-5 pt-3 col-md-8">
+            <div className="bgModal mobileModal col-md-8">
                 <p className="title">TERMS & CONDITIONS</p>
                 <div className="modalText" dangerouslySetInnerHTML={ createTerms()} />
                 <br/>
