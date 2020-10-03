@@ -622,6 +622,10 @@ div.cls_002 {
 }
 
 @media (max-width: 1024px) {
+  .aboutCreators {
+    width: auto !important;
+  }
+
   .mobileModal {
     width: 90% !important;
     margin-left: auto;
@@ -741,5 +745,5 @@ div.cls_002 {
 }
 
 .aboutCreators {
-  width: 20% !important;
+  width: auto !important;
 }
