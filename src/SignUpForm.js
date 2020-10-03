@@ -150,8 +150,6 @@ class SignUpForm extends Component {
 
     componentDidMount() {
         if(window.innerWidth < 1200) {
-            var checkboxDiv = document.getElementById("checkboxSixColumn");
-            checkboxDiv.classList.remove("col-md-6");
             var signupButton = document.getElementById("signupButton");
             signupButton.classList.remove("col-md-2");
             signupButton.style.removeProperty("width");
